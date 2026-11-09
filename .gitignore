@@ -1,0 +1,4 @@
+*.png
+.DS_Store
+_debug.html
+_frame.html
