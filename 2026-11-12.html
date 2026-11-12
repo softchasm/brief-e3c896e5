@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow,noarchive">
+<title>晨间简报 · 2026年11月12日</title>
+<style>
+  :root{
+    --bg:#FCFCFB;
+    --wash:#F9F9F7;
+    --ink:#2E2C27;
+    --ink-soft:#6B6A63;
+    --ink-grey:#B4B3A8;
+    --hairline:#E4E3DC;
+    --edge:#E1E1DF;
+    --clay:#C6613F;
+    --clay-hover:#AE5133;
+    --sans:-apple-system,"Segoe UI",sans-serif;
+    --mono:"SF Mono",Menlo,Consolas,monospace;
+    --serif:"Songti SC","Source Han Serif SC","Noto Serif CJK SC",STSong,Georgia,serif;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0}
+  body{background:var(--bg);color:var(--ink);font-family:var(--sans);
+       -webkit-font-smoothing:antialiased;font-style:normal}
+  .band{width:100%}
+  .band--top{background:var(--wash);border-bottom:1px solid var(--edge)}
+  .band--bottom{background:var(--bg)}
+  .inner{max-width:860px;margin:0 auto;padding:54px 32px 44px}
+  .band--bottom .inner{padding:48px 32px 72px}
+
+  .daydate{font-size:12.5px;letter-spacing:.06em;color:var(--ink-soft);margin:0 0 14px}
+  h1{font-family:var(--serif);font-weight:600;font-size:40px;line-height:1.3;
+     margin:0 0 34px;letter-spacing:-.005em;text-wrap:balance}
+
+  .drawing{display:block;width:100%;height:auto;margin:0 0 6px}
+
+  .acts{display:flex;margin-top:22px}
+  .act{flex:1 1 0;padding:0 26px}
+  .act:first-child{padding-left:0}
+  .act:last-child{padding-right:0}
+  .act + .act{border-left:1px solid var(--hairline)}
+  .act__time{font-size:12.5px;font-weight:700;letter-spacing:.02em;margin:0 0 7px}
+  .act__line{font-size:13.5px;line-height:1.62;color:var(--ink-soft);margin:0}
+
+  h2{font-size:12.5px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;
+     color:var(--ink);margin:46px 0 20px}
+  h2:first-of-type{margin-top:0}
+  h2 .h2note{text-transform:none;letter-spacing:0;font-weight:400;color:var(--ink-grey)}
+
+  ol,ul{list-style:none;margin:0;padding:0}
+  .item{display:flex;gap:16px;padding:0 0 26px}
+  .item__num{flex:0 0 18px;font-size:12.5px;color:var(--ink-grey);
+             line-height:1.75;font-variant-numeric:tabular-nums}
+  .item__body{flex:1 1 auto;min-width:0}
+  .item__title{font-size:15px;font-weight:700;line-height:1.55;margin:0 0 5px}
+
+  .en{font-size:14px;line-height:1.68;color:var(--ink);margin:0 0 9px}
+  .en b{font-weight:700}
+  .zh{font-size:13.5px;line-height:1.7;color:var(--ink-soft);margin:0;
+      padding-left:13px;border-left:1px solid var(--hairline)}
+  .zh b{color:var(--ink);font-weight:600}
+
+  .gloss{font-size:12.5px;color:var(--ink-soft);font-weight:400}
+
+  .prose{font-size:14px;line-height:1.75;color:var(--ink-soft);margin:0 0 14px}
+  .prose b{color:var(--ink);font-weight:600}
+  .prose--lead{margin-bottom:18px}
+
+  .sub{font-size:13px;font-weight:700;color:var(--ink);margin:20px 0 8px;letter-spacing:.01em}
+
+  .step{display:flex;gap:13px;padding:0 0 13px;font-size:13.5px;line-height:1.72;color:var(--ink-soft)}
+  .step__n{flex:0 0 17px;color:var(--clay);font-weight:700;font-variant-numeric:tabular-nums}
+  .step__b{flex:1 1 auto;min-width:0}
+  .step__b b{color:var(--ink);font-weight:600}
+  .formula{font-family:var(--mono);font-size:12.5px;background:var(--wash);
+           border:1px solid var(--hairline);border-radius:3px;padding:1.5px 5px;
+           color:var(--ink);white-space:nowrap}
+
+  .tablewrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:12px 0 4px}
+  table.grid{border-collapse:collapse;width:100%;min-width:400px;
+             font-size:12.5px;color:var(--ink-soft);font-variant-numeric:tabular-nums}
+  table.grid th{text-align:left;font-weight:600;color:var(--ink);
+                border-bottom:1px solid var(--hairline);padding:6px 10px 6px 0}
+  table.grid td{border-bottom:1px solid var(--hairline);padding:6px 10px 6px 0}
+  table.grid th:nth-child(n+3),table.grid td:nth-child(n+3){text-align:right;padding-right:0}
+
+  .btn{display:inline-block;margin:12px 6px 0 0;background:var(--clay);border:1px solid var(--clay);
+       border-radius:8px;padding:9px 16px;font-family:var(--sans);font-weight:500;font-size:13px;
+       color:#FCFCFB;text-decoration:none;line-height:1.2}
+  .btn:hover{background:var(--clay-hover);border-color:var(--clay-hover)}
+
+  @media (max-width:640px){
+    .inner{padding:38px 20px 32px}
+    .band--bottom .inner{padding:34px 20px 52px}
+    h1{font-size:30px;margin-bottom:26px}
+    .acts{display:block}
+    .act{padding:0}
+    .act + .act{border-left:0;border-top:1px solid var(--hairline);margin-top:18px;padding-top:18px}
+    .formula{white-space:normal}
+  }
+
+  @media print{
+    .item,.act,.drawing,.tablewrap,.step,h2,h3{break-inside:avoid;page-break-inside:avoid}
+    h2,h3{break-after:avoid;page-break-after:avoid}
+    .btn{display:none}
+  }
+</style>
+</head>
+<body>
+
+<div class="band band--top">
+  <div class="inner">
+    <p class="daydate">2026年11月12日 · 星期四</p>
+    <h1>Carl，今天只讲一件事：订单簿上的 1,325 亿美元，离到手的钱还有多远。</h1>
+
+    <svg class="drawing" viewBox="0 0 840 180" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path d="M 0,134 C 20,132 40,130 60,130 C 130,130 190,73 250,73
+               C 310,73 360,82.5 420,82.5 C 480,82.5 540,50 600,50
+               C 670,50 730,50 790,50 L 840,50"
+            fill="none" stroke="#2E2C27" stroke-width="1.6" stroke-linecap="round"/>
+      <circle cx="60"  cy="130"  r="6"  fill="#B4B3A8"/>
+      <circle cx="250" cy="73"   r="11" fill="#2E2C27"/>
+      <circle cx="420" cy="82.5" r="7"  fill="#2E2C27"/>
+      <circle cx="600" cy="50"   r="9"  fill="#2E2C27"/>
+      <circle cx="790" cy="50"   r="7.5" fill="#F9F9F7" stroke="#C6613F" stroke-width="1.8"/>
+      <text x="60"  y="166" text-anchor="middle" font-family="-apple-system,sans-serif" font-size="11" fill="#B4B3A8">11/6 周五 7,377</text>
+      <text x="250" y="166" text-anchor="middle" font-family="-apple-system,sans-serif" font-size="11" fill="#B4B3A8">11/9 周一 +2.3%</text>
+      <text x="420" y="166" text-anchor="middle" font-family="-apple-system,sans-serif" font-size="11" fill="#B4B3A8">11/10 CPI −0.4%</text>
+      <text x="600" y="166" text-anchor="middle" font-family="-apple-system,sans-serif" font-size="11" fill="#B4B3A8">11/11 周三 7,619</text>
+      <text x="790" y="166" text-anchor="middle" font-family="-apple-system,sans-serif" font-size="11" fill="#C6613F">今晚盘后 思科</text>
+    </svg>
+
+    <div class="acts">
+      <div class="act">
+        <p class="act__time">7:30 — 7:36 AM</p>
+        <p class="act__line">上面那条线是标普 500 这四天的收盘。五条资讯里第一条是主线：CoreWeave 交了一份好财报，股价一天涨了四分之一。</p>
+      </div>
+      <div class="act">
+        <p class="act__time">7:36 — 7:47 AM</p>
+        <p class="act__line">打开配套的 xlsx，亲手算一遍"订单很厚的公司为什么还会亏"。八步，每步都写了点哪个格。</p>
+      </div>
+      <div class="act">
+        <p class="act__time">7:47 — 7:50 AM</p>
+        <p class="act__line">同一个"订单"数字，审计怎么看、买方怎么看；再回头用这把尺子量一遍 CoreWeave。</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="band band--bottom">
+  <div class="inner">
+
+    <h2>今日商业资讯 <span class="h2note">· 英文在上，中文在下</span></h2>
+    <ol>
+      <li class="item">
+        <div class="item__num">01</div>
+        <div class="item__body">
+          <p class="item__title">这是今天的主线：一份好财报，和它没说完的那一半</p>
+          <p class="en">CoreWeave delivered a beat-and-raise quarter: revenue of <b>$3.66 billion</b>, up 168% from a year ago, a backlog <span class="gloss">（白话：未履约订单——客户已经签了合同、但公司还没干活也还没算成收入的那部分金额。像健身房收了你三年的合同，课还没上）</span> of roughly <b>$132.5 billion</b>, and higher full-year guidance <span class="gloss">（白话：业绩指引——公司自己对外预告"我们今年大概能做多少"）</span> of $13.0–13.3 billion. The stock closed up about <b>25%</b> on Wednesday at $60.77, after losing some 40% over the prior month.</p>
+          <p class="zh">CoreWeave 交了一份"超预期、还上调全年目标"的财报：单季收入 36.6 亿美元，同比增长 168%；手上已签约未交付的订单约 <b>1,325 亿美元</b>；全年收入目标上调到 130~133 亿。周三股价涨约 25%，收 60.77 美元——此前一个月它跌了四成左右。<b>市场这一天改变的看法是："AI 的需求是不是真的"——订单簿回答了这个问题。</b>但订单簿没回答另一个问题：把这些订单做出来，要先花多少钱。那是第 03 条。</p>
+        </div>
+      </li>
+      <li class="item">
+        <div class="item__num">02</div>
+        <div class="item__body">
+          <p class="item__title">周三：AI 股领涨，三大指数全收高</p>
+          <p class="en">Stocks rallied on Wednesday with tech in the lead. The S&amp;P 500 rose <b>1.31%</b> to 7,619.38, the Nasdaq gained <b>1.60%</b> to 25,466.19, and the Dow added <b>0.49%</b> to 52,486.49. Micron and Oracle jumped alongside CoreWeave as money rotated back into AI infrastructure.</p>
+          <p class="zh">周三美股上涨，科技股带头。标普 500 涨 1.31% 收 7,619.38，纳斯达克涨 1.60% 收 25,466.19，道指涨 0.49% 收 52,486.49。美光、甲骨文跟着 CoreWeave 一起大涨。<b>一家公司的财报带动整个板块，说明市场把它当成了"AI 基建还行不行"的体温计。</b><br><b>更正：</b>周二那期把上周五（11/6）的收盘数写成了周一的。周一（11/9）实际是大涨：标普 500 涨约 2.3%，收 7,549.94。</p>
+        </div>
+      </li>
+      <li class="item">
+        <div class="item__num">03</div>
+        <div class="item__body">
+          <p class="item__title">同一份财报的另一半：钱先花出去，利息比利润大</p>
+          <p class="en">The other half of CoreWeave's report got less airtime. Capex <span class="gloss">（白话：资本开支——公司为了买长期要用的东西，比如机房、服务器，花出去的钱）</span> was <b>$14.5 billion</b> in a single quarter, about four times revenue. Interest expense <span class="gloss">（白话：借钱要付的利息）</span> reached <b>$846 million</b> against operating income <span class="gloss">（白话：营业利润——主业赚的钱，还没扣利息和税）</span> of $207 million, leaving a net loss <span class="gloss">（白话：所有收入减掉所有成本、利息和税之后是负数，也就是亏了）</span> of $709 million. Management guided fourth-quarter interest to $1.05–1.15 billion.</p>
+          <p class="zh">同一份财报里被讲得少的那一半：单季资本开支 <b>145 亿美元</b>，约为当季收入的四倍；利息费用 <b>8.46 亿</b>，而主业赚的营业利润只有 2.07 亿，最后净亏损 7.09 亿。公司预告下季度利息还要升到 10.5~11.5 亿。<b>订单越多，要先垫的钱越多，要借的钱越多——这家公司的估值不取决于订单有多厚，取决于订单变成收入的速度能不能跑赢利息。</b>今天的上手练算的就是这个。</p>
+        </div>
+      </li>
+      <li class="item">
+        <div class="item__num">04</div>
+        <div class="item__body">
+          <p class="item__title">周二的通胀数据，正好打在"靠借钱扩张"的公司身上</p>
+          <p class="en">Tuesday's CPI <span class="gloss">（白话：居民消费价格指数，衡量老百姓买同一篮子东西比之前贵了多少）</span> came in hot: prices rose <b>0.4%</b> month over month against a 0.3% forecast, and core CPI <span class="gloss">（白话：去掉食品和能源这两样价格跳得厉害的东西之后的物价涨幅）</span> rose 0.3% against 0.2%. The S&amp;P 500 slipped 0.38% to 7,520.93 as the report revived worries about further Fed rate increases.</p>
+          <p class="zh">周二公布的 10 月 CPI 高于预期：环比涨 0.4%（预期 0.3%），核心 CPI 涨 0.3%（预期 0.2%）。标普 500 当天跌 0.38% 收 7,520.93，市场重新担心美联储还要加息。<b>利率每高一点，受伤最重的是借钱最多的公司</b>——所以这条和第 03 条是同一件事的两面：一边是利息已经比利润大，一边是利率可能还要涨。</p>
+        </div>
+      </li>
+      <li class="item">
+        <div class="item__num">05</div>
+        <div class="item__body">
+          <p class="item__title">今晚盘后：思科，从卖设备的那一头验证同一个故事</p>
+          <p class="en">Cisco reports after the close tonight. It guided revenue to <b>$18.0–18.2 billion</b>, and investors will look past the headline to one line: AI infrastructure orders from the big cloud companies, which ran at about <b>$4 billion</b> last quarter. Applied Materials reports the same evening.</p>
+          <p class="zh">思科今晚美股收盘后发财报（北京时间周五清晨）。公司此前给的收入指引是 180~182 亿美元，但投资人真正要看的只有一行：来自大型云厂商的 AI 基础设施订单，上个季度约 40 亿美元。应用材料同晚发布。<b>CoreWeave 是花钱建机房的一方，思科是把网络设备卖给机房的一方</b>——如果买方说订单很厚、卖方的订单却没跟上，这两个数字里就有一个有问题。</p>
+        </div>
+      </li>
+    </ol>
+
+    <h2>上手练 · 十分钟 <span class="h2note">· 场景来自第 01 和第 03 条</span></h2>
+    <p class="prose prose--lead">配套文件 <b>「2026-11-12 上手练.xlsx」</b> 和这份 PDF 在同一个文件夹里，打开它，跟着下面一步一步按。<b>每一步都写了点哪个格、输入什么</b>，不需要你事先会任何函数。</p>
+
+    <p class="prose">背景：一家<b>虚构的</b>算力租赁公司（买服务器、租给别人用），手上有 8 份已经签好的合同。你要回答三个问题：<b>这些订单一年能变成多少收入？做这些订单要先花多少钱？借钱的利息，主业利润盖得住吗？</b>金额单位都是百万美元。</p>
+
+    <div class="tablewrap">
+      <table class="grid">
+        <thead>
+          <tr><th>合同编号</th><th>客户</th><th>合同总额</th><th>合同年限</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>K-01</td><td>AI 实验室甲</td><td>12,000</td><td>5</td></tr>
+          <tr><td>K-02</td><td>AI 实验室乙</td><td>9,000</td><td>6</td></tr>
+          <tr><td>K-03</td><td>云大厂甲</td><td>6,000</td><td>4</td></tr>
+          <tr><td>K-04</td><td>云大厂乙</td><td>4,800</td><td>4</td></tr>
+          <tr><td>K-05</td><td>AI 实验室甲（二期）</td><td>7,500</td><td>5</td></tr>
+          <tr><td>K-06</td><td>企业客户甲</td><td>1,200</td><td>3</td></tr>
+          <tr><td>K-07</td><td>企业客户乙</td><td>900</td><td>3</td></tr>
+          <tr><td>K-08</td><td>主权基金项目</td><td>3,600</td><td>6</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="prose" style="margin-top:10px">四个假设（表格第 17 行也写着）：每 1 元年收入，要先花 <b>3 元</b>买设备；设备钱的 <b>80%</b> 靠借；借款年利率 <b>9%</b>；营业利润率<span class="gloss">（白话：每收 100 元，扣掉电费、人工和设备折旧之后，主业还剩多少元。折旧是指——机器能用好几年，所以买它的钱要摊到每一年里算）</span>是 <b>20%</b>。</p>
+
+    <p class="sub">第一步 · 订单一年能变成多少收入</p>
+    <div class="step"><div class="step__n">①</div><div class="step__b">点一下 <b>E2</b>，输入 <span class="formula">=C2/D2</span>，按回车。<br>这是除法：合同总额 ÷ 年限 = 每年能算成收入的金额。E2 应该出现 <b>2400</b>。</div></div>
+    <div class="step"><div class="step__n">②</div><div class="step__b">再点一下 E2 选中它，把鼠标移到这个格<b>右下角的小方块</b>上，光标变成<b>细实心十字</b>时<b>双击</b>。公式会自动填满 E3 到 E9。</div></div>
+    <div class="step"><div class="step__n">③</div><div class="step__b">点 <b>C10</b>，输入 <span class="formula">=SUM(C2:C9)</span>，回车；再点 <b>E10</b>，输入 <span class="formula">=SUM(E2:E9)</span>，回车。<br><span class="formula">SUM</span> 就是"把这一串格子加起来"，<span class="formula">C2:C9</span> 表示从 C2 一直到 C9。C10 是订单总额，E10 是一年的收入。</div></div>
+
+    <p class="sub">第二步 · 做这些订单要先花多少钱</p>
+    <div class="step"><div class="step__n">④</div><div class="step__b">点 <b>F2</b>，输入 <span class="formula">=E2*3</span>，回车。星号 <span class="formula">*</span> 在 Excel 里就是乘号。F2 应该出现 <b>7200</b>。</div></div>
+    <div class="step"><div class="step__n">⑤</div><div class="step__b">同样双击 F2 右下角的小方块填满 F3 到 F9，然后点 <b>F10</b>，输入 <span class="formula">=SUM(F2:F9)</span>，回车。</div></div>
+
+    <p class="sub">第三步 · 利息盖不盖得住</p>
+    <div class="step"><div class="step__n">⑥</div><div class="step__b">点 <b>F12</b>，输入 <span class="formula">=C10/E10</span>，回车。这是"订单总额 ÷ 一年的收入"，意思是手上的订单够做几年。</div></div>
+    <div class="step"><div class="step__n">⑦</div><div class="step__b">点 <b>F13</b>，输入 <span class="formula">=F10*0.8*0.09</span>，回车。设备投入 × 80% 是借来的钱，再 × 9% 就是一年要付的利息。</div></div>
+    <div class="step"><div class="step__n">⑧</div><div class="step__b">点 <b>F14</b>，输入 <span class="formula">=E10*0.2</span>，回车，这是营业利润。再点 <b>F15</b>，输入 <span class="formula">=F14-F13</span>，回车，这是付完利息还剩多少。</div></div>
+
+    <p class="sub">做完再看这三个考点</p>
+    <p class="prose">
+      <b>考点一：订单不等于今年的收入。</b>订单总额 <b>45,000</b>，一年能算成收入的只有 <b>9,400</b>，约占 <b>20.9%</b>；F12 应该是 <b>4.79</b>，也就是这些订单要将近五年才做完。新闻标题里的"订单多少亿"是一个<b>存量</b>，利润表上的收入是每年的<b>流量</b>，中间差着一个"年限"。<br><br>
+      <b>考点二：钱是先花出去的。</b>F10 应该是 <b>28,200</b>——相当于全部订单金额的 <b>62.7%</b>，要在收到第一笔收入之前就先垫出去。订单签得越多，垫的钱越多。这就是为什么一家"订单爆满"的公司反而最缺钱。<br><br>
+      <b>考点三：利息吃掉了主业利润。</b>一年利息 <b>2,030.4</b>，营业利润 <b>1,880</b>，F15 是 <b>−150.4</b>：主业是赚钱的，付完利息却是亏的。再试一下：把 F13 里的 <span class="formula">0.09</span> 改成 <span class="formula">0.1</span>，利息变成 <b>2,256</b>，亏损扩大到 <b>−376</b>——<b>利率每涨 1 个百分点，一年多付 225.6</b>。这就是第 04 条的通胀数据为什么会打到这类公司。
+    </p>
+
+    <h2>会计 → 估值桥梁 <span class="h2note">· 科目：未履约订单与合同负债</span></h2>
+    <p class="prose prose--lead">你刚才算的 45,000，在真实的财报里叫"未履约订单"。它有一个很特别的地方：<b>这个数字不在三张报表的任何一张上。</b></p>
+
+    <p class="sub">先讲这个科目是什么</p>
+    <p class="prose">客户签了一份五年的合同，这件事在会计上分三种状态。<b>还没干活、也还没收钱</b>的部分，哪张表上都没有，只在报表后面的文字说明（附注）里披露一个总数，这就是未履约订单。<b>还没干活、但已经收了钱</b>的部分，叫<b>合同负债</b><span class="gloss">（白话：客户预付的钱。之所以算"欠的"，是因为你欠客户一份还没提供的服务，像理发店收了储值卡的钱）</span>，在资产负债表上。<b>活干完了</b>的部分，才能算成收入，进利润表——这个"什么时候才能算成收入"的规则，叫<b>收入确认</b><span class="gloss">（白话：不是收到钱就算收入，是把答应客户的事做完了才算）</span>。</p>
+
+    <p class="sub">在审计底稿里，它是什么</p>
+    <p class="prose">一个<b>要核对真假和完整的披露数字</b>。审计会抽合同原件，看金额、期限对不对；看客户能不能中途解约、解约要不要赔钱；看公司有没有把还没签死的意向也算了进去。关心的是：<b>这个数字站得住吗？</b></p>
+
+    <p class="sub">在买方的模型里，同一个数字是什么</p>
+    <p class="prose">一条<b>未来几年收入的起跑线</b>，但买方会立刻追问三件审计不负责回答的事：<b>多快</b>能变成收入（你算的 4.79 年）；变成收入之前要<b>先垫多少钱</b>（你算的 28,200）；这些订单<b>集中在谁手里</b>。在你的练习表里，"AI 实验室甲"两份合同合计 19,500，占全部订单的 <b>43.3%</b>——这一家客户自己融不到钱，你将近一半的订单就悬空了。<b>审计问的是"合同是真的吗"，买方问的是"签合同的人付得起吗"。</b></p>
+
+    <p class="sub">可以带去面试的问题</p>
+    <p class="prose">"<b>贵公司的未履约订单里，有多少是客户可以不付违约金就取消的？前三大客户各占多少？这些客户付款的钱，又是从哪里来的？</b>" 这个问题把披露、客户集中度和信用风险串成了一条线，问的人一听就知道你看过合同条款，而不只是看过新闻标题。</p>
+
+    <h2>公司拆解 · CoreWeave <span class="h2note">· 周二拆过成本端，今天拆收入端</span></h2>
+    <p class="prose prose--lead">周二那期看的是它的服务器怎么折旧。今天用上手练的三把尺子，量它刚公布的真实数字。</p>
+
+    <p class="sub">商业模式，一句话</p>
+    <p class="prose">先签长期合同，再借钱买 GPU 和建机房，然后按月把算力租出去收钱。<b>合同是它去借钱的凭据</b>——所以订单簿对它来说不只是销售成绩，还是融资工具。</p>
+
+    <p class="sub">三个 driver</p>
+    <p class="prose">
+      <b>一、订单变成收入的速度。</b>1,325 亿美元订单，对比公司说的年底年化收入<span class="gloss">（白话：run-rate，把最近一个月或一个季度的收入乘成一整年，看"按现在的速度一年能做多少"）</span> 200~210 亿，够做 6 年多。机房建得慢一个季度，收入就晚一个季度。<br>
+      <b>二、资本开支的强度。</b>单季花 145 亿、收 36.6 亿，花的是收的 <b>4 倍</b>。全年资本开支指引 370~390 亿美元。管理层说，如果只做已经签下来的订单，2027 年的资本开支会和 2026 年持平。<br>
+      <b>三、借钱的成本。</b>单季利息 8.46 亿，是营业利润 2.07 亿的 <b>4.1 倍</b>。和你表里的 F13、F14 是同一个关系，只是更悬殊。
+    </p>
+
+    <p class="sub">三个要看的数</p>
+    <p class="prose">
+      <b>调整后 EBITDA</b><span class="gloss">（白话：EBITDA 是"还没扣利息、税、折旧和摊销之前的利润"。可以理解成：先假装机器不会旧、钱不用还利息，生意本身能剩多少）</span> 22.56 亿美元，占收入约 <b>62%</b>，看起来很赚钱。但这家公司最大的两笔成本恰恰就是折旧和利息——<b>EBITDA 把这两样都拿掉了</b>，所以它和 7.09 亿的净亏损可以同时成立。看到 EBITDA 很漂亮的重资产公司，第一反应应该是去找被拿掉的那两行。<br>
+      <b>云毛利率</b><span class="gloss">（白话：毛利率是每收 100 元，扣掉直接成本后剩多少元。对云公司来说，直接成本主要是电费、机房租金和服务器折旧）</span>，它决定每多租出去一台机器是在赚还是在赔。<br>
+      <b>单位经济</b><span class="gloss">（白话：unit economics，把生意缩小到"一个单位"来算账——这里就是一台 GPU：买它花多少、一年租金多少、电费多少、几年回本）</span>：一台 GPU 的租金能不能在它过时之前，把买它的钱和借钱的利息都挣回来。这一个问题，就是今天整期的主线。
+    </p>
+
+    <h2>一句英文商业表达</h2>
+    <p class="prose prose--lead">从今天第 01 条里挑的：</p>
+    <p class="en" style="font-size:15px;font-weight:700;margin-bottom:12px">"CoreWeave delivered a beat-and-raise quarter."</p>
+    <p class="prose"><b>beat-and-raise</b> 是两个动作压成的一个词：<b>beat</b> 指这个季度的实际数字超过了市场预期，<b>raise</b> 指公司同时上调了对未来的指引。合起来就是"这季做得比预期好，而且管理层认为后面还会更好"。</p>
+    <p class="prose"><b>什么时候用：</b>财报发布后的第一句总结。投行晨会、买方的盘后点评、FP&amp;A 向管理层汇报同行业绩时，都用这个词开头，然后再讲细节。</p>
+    <p class="prose"><b>为什么比直白说法好：</b>说 "the results were good" 没有信息量——好在过去还是好在未来？beat-and-raise 用三个词把"过去超预期"和"未来上调"都交代了。只超预期、不上调指引的财报，市场反应往往冷淡得多，所以这个区分是有钱的含义的。</p>
+    <p class="prose"><b>两个替代说法对照：</b><br>
+      · "<b>topped estimates and lifted its outlook</b>" —— 意思相同，更正式，适合写进书面报告。<br>
+      · "<b>a beat-and-lower</b>" —— 反过来的情况：本季超预期，但下调了未来指引，通常股价会跌。知道这一对，你就能听懂大部分财报点评的第一句话。
+    </p>
+
+    <a class="btn" href="https://claude.ai/new?q=%E8%AF%B7%E7%BB%99%E6%88%91%E5%87%BA%E4%B8%80%E9%81%93%E4%B8%8A%E6%89%8B%E7%BB%83%E7%9A%84%E8%BF%9B%E9%98%B6%E9%A2%98%E3%80%82%E8%83%8C%E6%99%AF%EF%BC%9A%E6%88%91%E5%88%9A%E5%81%9A%E5%AE%8C%E4%B8%80%E9%81%93%E7%BB%83%E4%B9%A0%EF%BC%8C%E4%B8%80%E5%AE%B6%E8%99%9A%E6%9E%84%E7%9A%84%E7%AE%97%E5%8A%9B%E7%A7%9F%E8%B5%81%E5%85%AC%E5%8F%B8%E6%89%8B%E4%B8%8A%E6%9C%89%208%20%E4%BB%BD%E5%90%88%E5%90%8C%E3%80%81%E6%9C%AA%E5%B1%A5%E7%BA%A6%E8%AE%A2%E5%8D%95%E5%90%88%E8%AE%A1%2045%2C000%20%E7%99%BE%E4%B8%87%E7%BE%8E%E5%85%83%EF%BC%8C%E6%88%91%E7%AE%97%E5%87%BA%E6%AF%8F%E5%B9%B4%E8%83%BD%E7%A1%AE%E8%AE%A4%E6%94%B6%E5%85%A5%209%2C400%E3%80%81%E5%89%8D%E6%9C%9F%E8%AE%BE%E5%A4%87%E6%8A%95%E5%85%A5%2028%2C200%E3%80%81%E6%8C%89%E4%B9%9D%E5%8E%98%E5%88%A9%E7%8E%87%E4%B8%80%E5%B9%B4%E5%88%A9%E6%81%AF%202%2C030.4%EF%BC%8C%E6%AF%94%E8%90%A5%E4%B8%9A%E5%88%A9%E6%B6%A6%201%2C880%20%E8%BF%98%E5%A4%9A%E3%80%82%E8%BF%99%E6%AC%A1%E8%AF%B7%E5%8A%A0%E4%B8%8A%E2%80%9C%E5%90%88%E5%90%8C%E5%88%86%E6%89%B9%E5%BC%80%E5%A7%8B%E4%BA%A4%E4%BB%98%E2%80%9D%E5%92%8C%E2%80%9C%E5%AE%A2%E6%88%B7%E6%8F%90%E5%89%8D%E8%A7%A3%E7%BA%A6%E2%80%9D%E4%B8%A4%E4%B8%AA%E5%8F%98%E5%8C%96%EF%BC%8C%E6%95%B0%E6%8D%AE%E9%9B%86%E6%8E%A7%E5%88%B6%E5%9C%A8%2010%20%E8%A1%8C%E4%BB%A5%E5%86%85%E3%80%82%E6%88%91%E4%B8%8D%E4%BC%9A%20Excel%EF%BC%8C%E6%AF%8F%E4%B8%80%E6%AD%A5%E9%83%BD%E8%A6%81%E5%86%99%E6%B8%85%E6%A5%9A%E7%82%B9%E5%93%AA%E4%B8%AA%E5%8D%95%E5%85%83%E6%A0%BC%E3%80%81%E8%BE%93%E5%85%A5%E4%BB%80%E4%B9%88%E5%85%AC%E5%BC%8F%E3%80%81%E7%84%B6%E5%90%8E%E5%81%9A%E4%BB%80%E4%B9%88%E5%8A%A8%E4%BD%9C%EF%BC%8C%E7%94%A8%E5%88%B0%E7%9A%84%E5%87%BD%E6%95%B0%E5%90%84%E7%94%A8%E4%B8%80%E5%8F%A5%E8%AF%9D%E8%A7%A3%E9%87%8A%E3%80%82%E6%9C%80%E5%90%8E%E7%BB%99%E6%88%91%E4%B8%80%E4%BB%BD%E5%B8%A6%E7%AD%94%E6%A1%88%E7%9A%84%E5%AE%8C%E6%95%B4%E7%BB%83%E4%B9%A0%E3%80%82&surface=cowork&composer=mini">再出一道进阶题</a>
+    <a class="btn" href="https://claude.ai/new?q=%E6%88%91%E6%98%AF%E8%B4%A2%E5%8A%A1%E5%B0%8F%E7%99%BD%E3%80%82%E8%AF%B7%E7%94%A8%E7%94%9F%E6%B4%BB%E9%87%8C%E7%9A%84%E4%BE%8B%E5%AD%90%E7%BB%99%E6%88%91%E8%AE%B2%E6%B8%85%E6%A5%9A%E8%BF%99%E5%87%A0%E4%B8%AA%E8%AF%8D%E7%9A%84%E5%8C%BA%E5%88%AB%EF%BC%9A%E6%9C%AA%E5%B1%A5%E7%BA%A6%E8%AE%A2%E5%8D%95%EF%BC%88backlog%EF%BC%89%E3%80%81%E5%90%88%E5%90%8C%E8%B4%9F%E5%80%BA%E3%80%81%E6%94%B6%E5%85%A5%E7%A1%AE%E8%AE%A4%E3%80%81%E8%90%A5%E4%B8%9A%E5%88%A9%E6%B6%A6%E3%80%81EBITDA%E3%80%82%E4%B8%8D%E8%A6%81%E7%94%A8%E5%8F%A6%E4%B8%80%E4%B8%AA%E6%9C%AF%E8%AF%AD%E5%8E%BB%E8%A7%A3%E9%87%8A%E6%9C%AF%E8%AF%AD%EF%BC%8C%E6%AF%8F%E4%B8%AA%E8%AF%8D%E9%85%8D%E4%B8%80%E4%B8%AA%E6%88%91%E8%83%BD%E5%A4%8D%E8%BF%B0%E7%BB%99%E5%88%AB%E4%BA%BA%E5%90%AC%E7%9A%84%E4%BE%8B%E5%AD%90%E3%80%82%E6%9C%80%E5%90%8E%E7%BB%99%E6%88%91%E4%B8%80%E9%A1%B5%E5%8F%AF%E4%BB%A5%E5%AD%98%E4%B8%8B%E6%9D%A5%E7%9A%84%E7%99%BD%E8%AF%9D%E5%AF%B9%E7%85%A7%E8%A1%A8%E3%80%82&surface=cowork&composer=mini">把这几个词讲透</a>
+    <a class="btn" href="https://claude.ai/new?q=%E8%AF%B7%E4%BD%A0%E6%89%AE%E6%BC%94%E4%B9%B0%E6%96%B9%E9%9D%A2%E8%AF%95%E5%AE%98%EF%BC%8C%E5%92%8C%E6%88%91%E5%81%9A%E4%B8%80%E5%9C%BA%E6%A8%A1%E6%8B%9F%E9%9D%A2%E8%AF%95%E3%80%82%E9%A2%98%E7%9B%AE%E5%9B%B4%E7%BB%95%20CoreWeave%202026%20%E5%B9%B4%E7%AC%AC%E4%B8%89%E5%AD%A3%E5%BA%A6%E8%B4%A2%E6%8A%A5%EF%BC%9A%E6%9C%AA%E5%B1%A5%E7%BA%A6%E8%AE%A2%E5%8D%95%E7%BA%A6%201%2C325%20%E4%BA%BF%E7%BE%8E%E5%85%83%EF%BC%8C%E5%8D%95%E5%AD%A3%E6%94%B6%E5%85%A5%E7%BA%A6%2036.6%20%E4%BA%BF%E7%BE%8E%E5%85%83%EF%BC%8C%E5%8D%95%E5%AD%A3%E8%B5%84%E6%9C%AC%E5%BC%80%E6%94%AF%E7%BA%A6%20145%20%E4%BA%BF%E7%BE%8E%E5%85%83%EF%BC%8C%E5%88%A9%E6%81%AF%E8%B4%B9%E7%94%A8%E7%BA%A6%208.46%20%E4%BA%BF%E7%BE%8E%E5%85%83%E3%80%82%E4%BD%A0%E5%8F%AF%E4%BB%A5%E4%B8%8A%E7%BD%91%E6%A0%B8%E5%AF%B9%E8%BF%99%E4%BA%9B%E5%85%AC%E5%BC%80%E6%95%B0%E5%AD%97%E3%80%82%E8%AF%B7%E5%B0%B1%E2%80%9C%E8%AE%A2%E5%8D%95%E5%A4%9A%E4%B9%85%E8%83%BD%E5%8F%98%E6%88%90%E6%94%B6%E5%85%A5%E2%80%9D%E2%80%9C%E5%85%88%E8%8A%B1%E5%87%BA%E5%8E%BB%E7%9A%84%E9%92%B1%E9%9D%A0%E4%BB%80%E4%B9%88%E8%9E%8D%E8%B5%84%E2%80%9D%E2%80%9C%E5%AE%A2%E6%88%B7%E9%9B%86%E4%B8%AD%E5%BA%A6%E2%80%9D%E8%BF%9E%E7%BB%AD%E8%BF%BD%E9%97%AE%E6%88%91%EF%BC%8C%E6%AF%8F%E6%AC%A1%E5%8F%AA%E9%97%AE%E4%B8%80%E4%B8%AA%E9%97%AE%E9%A2%98%EF%BC%8C%E7%AD%89%E6%88%91%E7%AD%94%E5%AE%8C%E5%86%8D%E8%BF%BD%E9%97%AE%E3%80%82%E7%BB%93%E6%9D%9F%E5%90%8E%E7%BB%99%E6%88%91%E4%B8%80%E4%BB%BD%E4%B9%A6%E9%9D%A2%E7%82%B9%E8%AF%84%EF%BC%9A%E5%93%AA%E9%87%8C%E7%AD%94%E5%BE%97%E5%A5%BD%E3%80%81%E5%93%AA%E9%87%8C%E9%9C%B2%E6%80%AF%E3%80%81%E6%A0%87%E5%87%86%E7%AD%94%E6%B3%95%E6%98%AF%E4%BB%80%E4%B9%88%E3%80%82&surface=cowork&composer=mini">拿这份财报练面试</a>
+
+  </div>
+</div>
+
+</body>
+</html>
