@@ -1,7 +1,7 @@
 /*
  * 晨间简报 · 页面自动更新
  *
- * 页面开着的时候，每 60 秒（以及切回这个标签页时）向服务器要一份这一页的最新版本，
+ * 页面开着的时候，每 30 秒（以及切回这个标签页、点回这个窗口时）向服务器要一份这一页的最新版本，
  * 和正在显示的版本比较；内容变了，就自动换成新版，并回到原来读到的位置。
  *
  * 为什么要自己比：网站让浏览器把页面缓存 10 分钟，服务器每次部署又会改掉所有文件的
@@ -13,7 +13,7 @@
   'use strict';
   if (!/^https?:$/.test(location.protocol) || !window.fetch || !window.Promise) { return; }
 
-  var CHECK_EVERY_MS = 60 * 1000;
+  var CHECK_EVERY_MS = 30 * 1000;
   var MIN_GAP_MS = 2 * 60 * 1000;   // 两次自动刷新至少隔 2 分钟，防止来回跳
   var path = location.pathname;
   var shownURL = location.href.split('#')[0];
@@ -125,5 +125,6 @@
     if (document.visibilityState === 'visible') { check(); }
   });
   window.addEventListener('pageshow', function (e) { if (e.persisted) { check(); } });
+  window.addEventListener('focus', check);   // 从别的程序点回 Chrome 窗口时立刻查一次
   check();
 })();
