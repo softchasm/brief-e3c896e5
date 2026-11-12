@@ -61,10 +61,11 @@
     location.replace(path + '?v=' + Date.now() + location.hash);
   }
 
-  // 刚由自动更新或切换跳过来：地址栏去掉 ?v=… / ?latest=…，回到原来的阅读位置，提示一句
+  // 刚由自动更新或切换跳过来：地址栏去掉 ?v=… / ?latest=… / ?follow=…，回到原来的阅读位置，提示一句
   var cameFromUpdate = /[?&]v=\d+/.test(location.search);
-  var cameFromLatest = /[?&]latest=\d+/.test(location.search);
-  if (cameFromUpdate || cameFromLatest) {
+  var cameFromLatest = /[?&]latest=\d+/.test(location.search);   // 自动切过来的
+  var cameFromFollow = /[?&]follow=\d+/.test(location.search);   // 从"最新一期"入口打开的
+  if (cameFromUpdate || cameFromLatest || cameFromFollow) {
     try { history.replaceState(history.state, '', path + location.hash); } catch (e) {}
   }
   var savedY = sGet(key + ':y');
@@ -90,7 +91,9 @@
   }
 
   var shown = null;       // 正在显示的这一版（从浏览器缓存里取，和屏幕上的是同一份）
-  var following = null;   // 打开时这一页是不是最新一期；是的话就跟着最新一期走
+  // 要不要跟着最新一期走：从"最新一期"入口打开或自动切过来的，一定跟；
+  // 其他方式打开的，看打开时这一页是不是最新一期
+  var following = (cameFromFollow || cameFromLatest) ? true : null;
   var latest = null;
   var busy = false;
   var checks = 0;
