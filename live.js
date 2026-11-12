@@ -1,8 +1,11 @@
 /*
  * 晨间简报 · 页面自动更新
  *
- * 页面开着的时候，每 30 秒（以及切回这个标签页、点回这个窗口时）向服务器要一份这一页的最新版本，
- * 和正在显示的版本比较；内容变了，就自动换成新版，并回到原来读到的位置。
+ * 一、这一页本身改了：页面开着的时候，每 30 秒（以及切回这个标签页、点回这个窗口时）
+ *     向服务器要一份这一页的最新版本，和正在显示的版本比较；内容变了，就自动换成新版，
+ *     并回到原来读到的位置。
+ * 二、出了新的一期：如果打开时这一页就是最新一期，之后 latest.json 指向了别的一期，
+ *     这一页会自动切过去。专门回去看旧刊时不打扰。
  *
  * 为什么要自己比：网站让浏览器把页面缓存 10 分钟，服务器每次部署又会改掉所有文件的
  * 修改时间，所以既不能指望普通刷新，也不能看修改时间，只能比内容本身。
@@ -14,8 +17,11 @@
   if (!/^https?:$/.test(location.protocol) || !window.fetch || !window.Promise) { return; }
 
   var CHECK_EVERY_MS = 30 * 1000;
-  var MIN_GAP_MS = 2 * 60 * 1000;   // 两次自动刷新至少隔 2 分钟，防止来回跳
+  var MIN_GAP_MS = 2 * 60 * 1000;   // 同一页两次自动刷新至少隔 2 分钟，防止来回跳
   var path = location.pathname;
+  var base = path.slice(0, path.lastIndexOf('/') + 1);
+  var dm = path.match(/(\d{4}-\d{2}-\d{2})\.html$/);
+  var myDate = dm ? dm[1] : null;   // 这一页是哪一期；目录页没有
   var shownURL = location.href.split('#')[0];
   var key = 'brief-live:' + path;
 
@@ -55,9 +61,10 @@
     location.replace(path + '?v=' + Date.now() + location.hash);
   }
 
-  // 刚由自动更新跳过来：地址栏去掉 ?v=…，回到原来的阅读位置，提示一句
+  // 刚由自动更新或切换跳过来：地址栏去掉 ?v=… / ?latest=…，回到原来的阅读位置，提示一句
   var cameFromUpdate = /[?&]v=\d+/.test(location.search);
-  if (cameFromUpdate) {
+  var cameFromLatest = /[?&]latest=\d+/.test(location.search);
+  if (cameFromUpdate || cameFromLatest) {
     try { history.replaceState(history.state, '', path + location.hash); } catch (e) {}
   }
   var savedY = sGet(key + ':y');
@@ -66,7 +73,8 @@
     var restore = function () { window.scrollTo(0, parseInt(savedY, 10) || 0); };
     if (document.readyState === 'complete') { restore(); } else { window.addEventListener('load', restore); }
   }
-  if (cameFromUpdate) { notice('已自动更新到最新版本'); }
+  if (cameFromLatest) { notice('已切换到最新一期'); }
+  else if (cameFromUpdate) { notice('已自动更新到最新版本'); }
 
   function fingerprint(text) {
     var h = 5381;
@@ -81,23 +89,40 @@
     });
   }
 
-  var shown = null;      // 正在显示的这一版（从浏览器缓存里取，和屏幕上的是同一份）
+  var shown = null;       // 正在显示的这一版（从浏览器缓存里取，和屏幕上的是同一份）
+  var following = null;   // 打开时这一页是不是最新一期；是的话就跟着最新一期走
+  var latest = null;
   var busy = false;
   var checks = 0;
   var offered = false;
 
-  function check() {
-    if (busy || document.visibilityState === 'hidden') { return; }
-    busy = true;
+  // 返回 true 表示已经切去别的一期了
+  function checkLatest() {
+    if (!myDate || following === false) { return Promise.resolve(false); }
+    return get(base + 'latest.json', 'no-store')
+      .then(function (t) {
+        var d = (JSON.parse(t) || {}).date;
+        if (!/^\d{4}-\d{2}-\d{2}$/.test(d || '')) { return false; }
+        latest = d;
+        if (following === null) { following = (d === myDate); return false; }
+        if (following && d !== myDate) {
+          location.replace(base + d + '.html?latest=' + Date.now());
+          return true;
+        }
+        return false;
+      })
+      .catch(function () { return false; });
+  }
+
+  function checkSelf() {
     var ready = shown !== null ? Promise.resolve() :
       get(shownURL, 'force-cache').then(function (t) { shown = fingerprint(t); });
-    ready
+    return ready
       .then(function () {
         if (sGet(key + ':to') === shown) { sDel(key + ':to'); }   // 上次的自动更新成功了
         return get(path, 'no-store');
       })
       .then(function (t) {
-        checks++;
         var fresh = fingerprint(t);
         if (fresh === shown || t.length < 500) { return; }
         var last = parseInt(sGet(key + ':at') || '0', 10);
@@ -110,14 +135,23 @@
         sSet(key + ':to', fresh);
         sSet(key + ':at', String(Date.now()));
         goFresh();
-      })
+      });
+  }
+
+  function check() {
+    if (busy || document.visibilityState === 'hidden') { return; }
+    busy = true;
+    checkLatest()
+      .then(function (moved) { checks++; return moved ? null : checkSelf(); })
       .catch(function () {})
       .then(function () { busy = false; });
   }
 
   window.briefLive = {
     check: check,
-    state: function () { return { shown: shown, checks: checks, busy: busy }; }
+    state: function () {
+      return { shown: shown, checks: checks, busy: busy, page: myDate, latest: latest, following: following };
+    }
   };
 
   setInterval(check, CHECK_EVERY_MS);
