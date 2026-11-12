@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow,noarchive">
+<title>晨间简报 · 2026年11月11日</title>
+<style>
+  :root{
+    --bg:#FCFCFB;
+    --wash:#F9F9F7;
+    --ink:#2E2C27;
+    --ink-soft:#6B6A63;
+    --ink-grey:#B4B3A8;
+    --hairline:#E4E3DC;
+    --edge:#E1E1DF;
+    --clay:#C6613F;
+    --clay-hover:#AE5133;
+    --sans:-apple-system,"Segoe UI",sans-serif;
+    --mono:"SF Mono",Menlo,Consolas,monospace;
+    --serif:"Songti SC","Source Han Serif SC","Noto Serif CJK SC",STSong,Georgia,serif;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0}
+  body{background:var(--bg);color:var(--ink);font-family:var(--sans);
+       -webkit-font-smoothing:antialiased;font-style:normal}
+  .band{width:100%}
+  .band--top{background:var(--wash);border-bottom:1px solid var(--edge)}
+  .band--bottom{background:var(--bg)}
+  .inner{max-width:860px;margin:0 auto;padding:54px 32px 44px}
+  .band--bottom .inner{padding:48px 32px 72px}
+
+  .daydate{font-size:12.5px;letter-spacing:.06em;color:var(--ink-soft);margin:0 0 14px}
+  h1{font-family:var(--serif);font-weight:600;font-size:40px;line-height:1.3;
+     margin:0 0 34px;letter-spacing:-.005em;text-wrap:balance}
+
+  .drawing{display:block;width:100%;height:auto;margin:0 0 6px}
+
+  .acts{display:flex;margin-top:22px}
+  .act{flex:1 1 0;padding:0 26px}
+  .act:first-child{padding-left:0}
+  .act:last-child{padding-right:0}
+  .act + .act{border-left:1px solid var(--hairline)}
+  .act__time{font-size:12.5px;font-weight:700;letter-spacing:.02em;margin:0 0 7px}
+  .act__line{font-size:13.5px;line-height:1.62;color:var(--ink-soft);margin:0}
+
+  h2{font-size:12.5px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;
+     color:var(--ink);margin:46px 0 20px}
+  h2:first-of-type{margin-top:0}
+  h2 .h2note{text-transform:none;letter-spacing:0;font-weight:400;color:var(--ink-grey)}
+
+  ol,ul{list-style:none;margin:0;padding:0}
+  .item{display:flex;gap:16px;padding:0 0 26px}
+  .item__num{flex:0 0 18px;font-size:12.5px;color:var(--ink-grey);
+             line-height:1.75;font-variant-numeric:tabular-nums}
+  .item__body{flex:1 1 auto;min-width:0}
+  .item__title{font-size:15px;font-weight:700;line-height:1.55;margin:0 0 5px}
+
+  .en{font-size:14px;line-height:1.68;color:var(--ink);margin:0 0 9px}
+  .en b{font-weight:700}
+  .zh{font-size:13.5px;line-height:1.7;color:var(--ink-soft);margin:0;
+      padding-left:13px;border-left:1px solid var(--hairline)}
+  .zh b{color:var(--ink);font-weight:600}
+
+  .gloss{font-size:12.5px;color:var(--ink-soft);font-weight:400}
+
+  .prose{font-size:14px;line-height:1.75;color:var(--ink-soft);margin:0 0 14px}
+  .prose b{color:var(--ink);font-weight:600}
+  .prose--lead{margin-bottom:18px}
+
+  .sub{font-size:13px;font-weight:700;color:var(--ink);margin:20px 0 8px;letter-spacing:.01em}
+
+  .step{display:flex;gap:13px;padding:0 0 13px;font-size:13.5px;line-height:1.72;color:var(--ink-soft)}
+  .step__n{flex:0 0 17px;color:var(--clay);font-weight:700;font-variant-numeric:tabular-nums}
+  .step__b{flex:1 1 auto;min-width:0}
+  .step__b b{color:var(--ink);font-weight:600}
+  .formula{font-family:var(--mono);font-size:12.5px;background:var(--wash);
+           border:1px solid var(--hairline);border-radius:3px;padding:1.5px 5px;
+           color:var(--ink);white-space:nowrap}
+
+  .tablewrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:12px 0 4px}
+  table.grid{border-collapse:collapse;width:100%;min-width:400px;
+             font-size:12.5px;color:var(--ink-soft);font-variant-numeric:tabular-nums}
+  table.grid th{text-align:left;font-weight:600;color:var(--ink);
+                border-bottom:1px solid var(--hairline);padding:6px 10px 6px 0}
+  table.grid td{border-bottom:1px solid var(--hairline);padding:6px 10px 6px 0}
+  table.grid th:nth-child(n+2),table.grid td:nth-child(n+2){text-align:right;padding-right:0}
+
+  .btn{display:inline-block;margin:12px 6px 0 0;background:var(--clay);border:1px solid var(--clay);
+       border-radius:8px;padding:9px 16px;font-family:var(--sans);font-weight:500;font-size:13px;
+       color:#FCFCFB;text-decoration:none;line-height:1.2}
+  .btn:hover{background:var(--clay-hover);border-color:var(--clay-hover)}
+
+  @media (max-width:640px){
+    .inner{padding:38px 20px 32px}
+    .band--bottom .inner{padding:34px 20px 52px}
+    h1{font-size:30px;margin-bottom:26px}
+    .acts{display:block}
+    .act{padding:0}
+    .act + .act{border-left:0;border-top:1px solid var(--hairline);margin-top:18px;padding-top:18px}
+    .formula{white-space:normal}
+  }
+
+  @media print{
+    .item,.act,.drawing,.tablewrap,.step,h2,h3{break-inside:avoid;page-break-inside:avoid}
+    h2,h3{break-after:avoid;page-break-after:avoid}
+    .btn{display:none}
+  }
+</style>
+<script src="live.js" defer></script>
+</head>
+<body>
+
+<div class="band band--top">
+  <div class="inner">
+    <p class="daydate">2026年11月11日 · 星期三 · 11月12日补发</p>
+    <h1>Carl，今天只讲一件事：利率一涨，越远的钱越不值钱。</h1>
+
+    <svg class="drawing" viewBox="0 0 840 180" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path d="M 0,126.5 C 20,126.2 40,125.8 60,125.8
+               C 120,125.8 190,115.4 250,115.4
+               C 310,115.4 360,37.5 420,37.5
+               C 480,37.5 540,50.6 600,50.6
+               C 670,50.6 730,50.6 790,50.6 L 840,50.6"
+            fill="none" stroke="#2E2C27" stroke-width="1.6" stroke-linecap="round"/>
+      <circle cx="60"  cy="125.8" r="11" fill="#2E2C27"/>
+      <circle cx="250" cy="115.4" r="6"  fill="#2E2C27"/>
+      <circle cx="420" cy="37.5"  r="10" fill="#2E2C27"/>
+      <circle cx="600" cy="50.6"  r="7"  fill="#2E2C27"/>
+      <circle cx="790" cy="50.6"  r="7.5" fill="#F9F9F7" stroke="#C6613F" stroke-width="1.8"/>
+      <text x="60"  y="166" text-anchor="middle" font-family="-apple-system,sans-serif" font-size="11" fill="#B4B3A8">11/5 周四 7,354</text>
+      <text x="250" y="166" text-anchor="middle" font-family="-apple-system,sans-serif" font-size="11" fill="#B4B3A8">11/6 周五 7,377</text>
+      <text x="420" y="166" text-anchor="middle" font-family="-apple-system,sans-serif" font-size="11" fill="#B4B3A8">11/9 周一 +2.3%</text>
+      <text x="600" y="166" text-anchor="middle" font-family="-apple-system,sans-serif" font-size="11" fill="#B4B3A8">11/10 CPI −0.4%</text>
+      <text x="780" y="166" text-anchor="middle" font-family="-apple-system,sans-serif" font-size="11" fill="#C6613F">今晚 CoreWeave 首日</text>
+    </svg>
+
+    <div class="acts">
+      <div class="act">
+        <p class="act__time">7:30 — 7:36 AM</p>
+        <p class="act__line">上面那条线是标普 500 最近五个交易日的收盘。五条资讯里第一条是主线：10 月物价涨得比预期快，利率跟着回到 5% 左右。</p>
+      </div>
+      <div class="act">
+        <p class="act__time">7:36 — 7:47 AM</p>
+        <p class="act__line">打开配套的 xlsx，亲手算一遍：两笔加起来都是 1,000 的钱，利率涨 1 个点，为什么一笔缩水多、一笔缩水少。七步，每步都写了点哪个格。</p>
+      </div>
+      <div class="act">
+        <p class="act__time">7:47 — 7:50 AM</p>
+        <p class="act__line">同一个折现率，审计在减值测试里怎么看、买方在估值里怎么看；再用这把尺子量一下英伟达。</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="band band--bottom">
+  <div class="inner">
+
+    <h2>今日商业资讯 <span class="h2note">· 英文在上，中文在下</span></h2>
+    <ol>
+      <li class="item">
+        <div class="item__num">01</div>
+        <div class="item__body">
+          <p class="item__title">这是今天的主线：物价又涨快了，而且快过预期</p>
+          <p class="en">October's CPI <span class="gloss">（白话：居民消费价格指数——统计局每个月去看同一篮子日常商品和服务，比上个月贵了多少）</span> ran hot. Consumer prices rose <b>0.4%</b> from September, against a 0.3% forecast, and core prices <span class="gloss">（白话：核心 CPI，去掉食品和能源这两样价格跳得最厉害的东西之后的涨幅，更能看出物价的底色）</span> rose <b>0.3%</b> against 0.2%. That follows a 0.6% jump in September. There is no year-over-year figure this time: the government shutdown in October 2025 left last year's data uncollected.</p>
+          <p class="zh">10 月 CPI 高于预期：物价比 9 月涨了 0.4%（预期 0.3%），核心 CPI 涨了 0.3%（预期 0.2%）；9 月已经涨了 0.6%。这次没有"同比"数字<span class="gloss">（白话：跟去年同一个月比）</span>——2025 年 10 月美国政府停摆，去年那个月的数据根本没采集。<b>这件事改变的是所有人的估值</b><span class="gloss">（白话：估一家公司或一样资产现在值多少钱）</span>：物价涨得快，美联储<span class="gloss">（白话：美国的央行，管利率的机构）</span>就要把利率压得更高、更久，而利率是给一切资产定价时用的那把尺子。<b>尺子一变，离今天越远的钱，缩水越多</b>——今天整期讲的就是这一句。</p>
+        </div>
+      </li>
+      <li class="item">
+        <div class="item__num">02</div>
+        <div class="item__body">
+          <p class="item__title">债市先反应：10 年期美债收益率回到 5% 左右</p>
+          <p class="en">Bond yields jumped. The 10-year Treasury yield <span class="gloss">（白话：借钱给美国政府十年，每年能拿到的回报率）</span> climbed back to about <b>5%</b>, and traders moved to price in another Fed rate increase in December. Fed Governor Christopher Waller had signaled he would back a stronger response if inflation readings came in hot.</p>
+          <p class="zh">债券市场最先反应：10 年期美国国债收益率回到 5% 左右，市场几乎已把 12 月再加息<span class="gloss">（白话：央行把基准利率调高，借钱变贵）</span>当成定局；美联储理事沃勒此前就表态，通胀数据偏热的话，他支持更强硬的应对。<b>10 年期国债收益率是买方估值时"无风险利率"的起点</b><span class="gloss">（白话：无风险利率，就是把钱借给最不可能赖账的人——美国政府——能拿到的回报。任何有风险的投资，都至少要比它多赚一些才值得投）</span>。它一动，第 03 条和上手练里的一切都会跟着动。</p>
+        </div>
+      </li>
+      <li class="item">
+        <div class="item__num">03</div>
+        <div class="item__body">
+          <p class="item__title">股市跟着跌，跌得最狠的是科技股</p>
+          <p class="en">Stocks slipped. The S&amp;P 500 fell <b>0.38%</b> to 7,520.93, and all three major indexes closed lower. Technology was the worst of the 11 sectors, down <b>1.4%</b> — nearly four times the index's decline.</p>
+          <p class="zh">股市跟着收低：标普 500 跌 0.38% 收 7,520.93，三大指数全部收跌。11 个行业板块里科技股最差，跌了 1.4%，接近大盘跌幅的四倍。<b>为什么偏偏是科技股？因为它们的估值里，有一大块是"很多年以后才赚到的钱"</b>——利率一涨，这一块缩水最多。上手练会让你亲手算出这个差别。</p>
+        </div>
+      </li>
+      <li class="item">
+        <div class="item__num">04</div>
+        <div class="item__body">
+          <p class="item__title">收盘后：一家靠借钱扩张的公司，在利率回升的当天交成绩单</p>
+          <p class="en">After the closing bell, CoreWeave released its third-quarter results. The yardsticks investors brought in: a backlog <span class="gloss">（白话：未履约订单——客户已经签了合同、但公司还没干活、也还没算成收入的那部分金额）</span> of <b>$104.2 billion</b> at the end of June, more than $25 billion of new commitments signed early in the quarter, and the company's own revenue guidance <span class="gloss">（白话：业绩指引，公司自己对外预告"这个季度大概能做多少"）</span> of $3.45–3.60 billion for the quarter.</p>
+          <p class="zh">周二美股收盘后（北京时间今早 5 点左右），CoreWeave 发布三季报。投资人拿来比的三把尺子：二季度末手上已签约未交付的订单 1,042 亿美元；三季度刚开始又新签了超过 250 亿美元的承诺；公司自己给三季度的收入目标是 34.5~36 亿美元。<b>它买服务器的钱大多是借的——在利率回到 5% 的同一天交成绩单，市场会特别留意它要付多少利息。</b>明天那期专门拆这份财报。</p>
+        </div>
+      </li>
+      <li class="item">
+        <div class="item__num">05</div>
+        <div class="item__body">
+          <p class="item__title">今晚看什么：CoreWeave 财报后的第一个交易日</p>
+          <p class="en">What to watch: tonight is CoreWeave's first full session after its report — a live test of whether investors will still pay up for AI growth with the 10-year near 5%. Nvidia, which supplies the chips CoreWeave rents out, reports on <b>Nov. 17</b>.</p>
+          <p class="zh">今晚美股开盘，是 CoreWeave 财报后的第一个完整交易日：10 年期收益率在 5% 附近的时候，市场还愿不愿意为 AI 的增长付高价，今晚就能看到答案。给 CoreWeave 供应芯片的英伟达，下周二（11 月 17 日）发财报——它是今天的公司拆解。</p>
+        </div>
+      </li>
+    </ol>
+
+    <h2>上手练 · 十分钟 <span class="h2note">· 场景来自第 01 和第 03 条</span></h2>
+    <p class="prose prose--lead">配套文件 <b>「2026-11-11 上手练.xlsx」</b> 和这份 PDF 在同一个文件夹里，打开它，跟着下面一步一步按。<b>每一步都写了点哪个格、输入什么</b>，不需要你事先会任何函数。</p>
+
+    <p class="prose">背景：两家<b>虚构的</b>公司，未来 10 年一共都会给你带来 <b>1,000</b> 的现金（单位：百万美元）。区别只在<b>什么时候到手</b>：稳健公司每年给 100；成长公司前几年给得少、后几年给得多。你要回答：<b>这两笔钱今天各值多少？利率从 8% 涨到 9%，哪一笔缩水更多？</b>这里要用到两个词。<b>现值</b><span class="gloss">（白话：将来才到手的钱，换算成今天值多少。今天的 100 元可以存银行生利息，所以一年后的 100 元，今天只值不到 100 元）</span>；<b>折现率</b><span class="gloss">（白话：把将来的钱换算回今天时用的利率。它越高，将来的钱今天越不值钱）</span>。</p>
+
+    <div class="tablewrap">
+      <table class="grid">
+        <thead>
+          <tr><th>年份（A 列）</th><th>稳健公司现金流（B 列）</th><th>成长公司现金流（C 列）</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>1</td><td>100</td><td>20</td></tr>
+          <tr><td>2</td><td>100</td><td>30</td></tr>
+          <tr><td>3</td><td>100</td><td>45</td></tr>
+          <tr><td>4</td><td>100</td><td>60</td></tr>
+          <tr><td>5</td><td>100</td><td>80</td></tr>
+          <tr><td>6</td><td>100</td><td>100</td></tr>
+          <tr><td>7</td><td>100</td><td>125</td></tr>
+          <tr><td>8</td><td>100</td><td>150</td></tr>
+          <tr><td>9</td><td>100</td><td>180</td></tr>
+          <tr><td>10</td><td>100</td><td>210</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="prose" style="margin-top:10px">表格里第 1 年在第 2 行，第 10 年在第 11 行。折现率写在 <b>H2</b> 这一格，现在是 <b>0.08</b>（也就是 8%）。</p>
+
+    <p class="sub">第一步 · 算"折现系数"：将来的 1 元，今天值多少</p>
+    <div class="step"><div class="step__n">①</div><div class="step__b">点一下 <b>D2</b>，输入 <span class="formula">=1/(1+$H$2)^A2</span>，按回车。D2 应该出现 <b>0.9259</b> 左右（后面还有更多小数，没关系）。<br><span class="formula">^</span> 是"几次方"：A2 是第几年，第 1 年就除一次 1.08，第 2 年除两次 1.08。<span class="formula">$H$2</span> 指 H2 这一格的折现率，两个 <span class="formula">$</span> 的意思是"锁住这一格"。</div></div>
+    <div class="step"><div class="step__n">②</div><div class="step__b">再点一下 D2 选中它，把鼠标移到这个格<b>右下角的小方块</b>上，光标变成<b>细实心十字</b>时<b>双击</b>，公式会自动填满 D3 到 D11。往下填的时候，A2 会自动变成 A3、A4……，而锁住的 $H$2 一直指着折现率那一格——这就是要加 $ 的原因。D11 应该是 <b>0.4632</b>：10 年后的 1 元，今天只值 4 毛 6。</div></div>
+
+    <p class="sub">第二步 · 算现值和合计</p>
+    <div class="step"><div class="step__n">③</div><div class="step__b">点 <b>E2</b>，输入 <span class="formula">=B2*D2</span>，回车；再点 <b>F2</b>，输入 <span class="formula">=C2*D2</span>，回车。星号 <span class="formula">*</span> 在 Excel 里就是乘号。然后分别双击 E2、F2 右下角的小方块，填满到第 11 行。E2 应该是 <b>92.59</b>，F2 是 <b>18.52</b>。</div></div>
+    <div class="step"><div class="step__n">④</div><div class="step__b">点 <b>B12</b>，输入 <span class="formula">=SUM(B2:B11)</span>，回车。<span class="formula">SUM</span> 就是"把这一串格子加起来"，<span class="formula">B2:B11</span> 表示从 B2 一直到 B11。用同样的办法：C12 输入 <span class="formula">=SUM(C2:C11)</span>，E12 输入 <span class="formula">=SUM(E2:E11)</span>，F12 输入 <span class="formula">=SUM(F2:F11)</span>。</div></div>
+
+    <p class="sub">第三步 · 把利率调高 1 个点</p>
+    <div class="step"><div class="step__n">⑤</div><div class="step__b">先把 8% 时的结果存起来：用鼠标从 <b>E12</b> 拖到 <b>F12</b> 选中这两格，按 <b>Ctrl+C</b> 复制；点 <b>E14</b>，按 <b>Ctrl+Alt+V</b>，在弹出的"选择性粘贴"窗口里点<b>"数值"</b>，再点确定。这样 E14、F14 存下的是数字本身，之后不会再跟着变。</div></div>
+    <div class="step"><div class="step__n">⑥</div><div class="step__b">点 <b>H2</b>，把 0.08 改成 <b>0.09</b>，回车。D、E、F 三列和第 12 行会全部自动重算。</div></div>
+    <div class="step"><div class="step__n">⑦</div><div class="step__b">点 <b>E15</b>，输入 <span class="formula">=E12/E14-1</span>，回车；点 <b>F15</b>，输入 <span class="formula">=F12/F14-1</span>，回车。这是"新值 ÷ 旧值 − 1"，算出来就是变了百分之几。最后用鼠标选中 E15 到 F15，按 <b>Ctrl+Shift+5</b>，把它们显示成百分比。</div></div>
+
+    <p class="sub">做完再看这三个考点</p>
+    <p class="prose">
+      <b>考点一：同样是 1,000，今天的价值不一样。</b>8% 时，稳健公司的现值 E14 是 <b>671.01</b>，成长公司 F14 只有 <b>582.82</b>，差了 <b>88.19</b>。两家将来给的钱一分不差，差的只是"什么时候到手"——越晚到手的钱，今天越不值钱。<br><br>
+      <b>考点二：利率涨 1 个点，成长公司缩水更多。</b>改成 9% 以后，稳健公司变成 <b>641.77</b>，E15 应该是 <b>−4.36%</b>；成长公司变成 <b>547.72</b>，F15 应该是 <b>−6.02%</b>。成长公司的跌幅是稳健公司的 <b>1.38 倍</b>。这就是第 03 条里科技股比大盘跌得狠的原因：它们的价值更多押在远期。<br><br>
+      <b>考点三：这种"对利率有多敏感"，有个名字叫久期</b><span class="gloss">（白话：把每一笔钱"多少年后到手"，按它今天值多少加权平均，得出的"平均要等几年"。等得越久，利率一动，价值晃得越厉害）</span>。按 8% 算，稳健公司的久期是 <b>4.87 年</b>，成长公司是 <b>6.77 年</b>。买方说一只股票 long duration（久期长），意思就是它的价值大头在很远的将来，利率是它的天敌。
+    </p>
+
+    <h2>会计 → 估值桥梁 <span class="h2note">· 科目：商誉，和它的减值测试</span></h2>
+    <p class="prose prose--lead">你刚才用的那把尺子——折现率——在审计底稿里也会出现，而且出现在一个金额往往很大的科目上：<b>商誉</b>。</p>
+
+    <p class="sub">先讲这个科目是什么</p>
+    <p class="prose">一家公司花 100 亿买下另一家公司，被买的那家账上的资产减掉负债，按公允价值<span class="gloss">（白话：如果现在拿到市场上卖，能卖多少钱）</span>算只值 60 亿。多付的 40 亿，就记成<b>商誉</b><span class="gloss">（白话：为对方的品牌、客户关系、团队这些看不见摸不着的东西多付的钱）</span>。商誉不像机器那样每年折旧<span class="gloss">（白话：一台机器能用好几年，买它的钱要摊到每一年里算一点）</span>，而是在中国准则和国际准则下<b>至少每年做一次减值测试</b><span class="gloss">（白话：检查一下"当初多付的这笔钱，现在还值不值"。不值了，就把账上的金额调低，调低的部分记成当年的损失）</span>。测试的核心是算<b>可收回金额</b><span class="gloss">（白话：这块业务要么现在卖掉能拿多少，要么继续经营、把未来的现金流折回今天值多少，两者取高的那个）</span>——后一半，用的就是你刚才算的现值。</p>
+
+    <p class="sub">在审计底稿里，它是什么</p>
+    <p class="prose">一组<b>要逐个质疑的假设</b>：现金流预测靠不靠谱，增长率是不是拍脑袋，<b>折现率是怎么来的</b>。尤其在这周这样利率大涨的时候——《企业会计准则第 8 号——资产减值》把市场利率当期提高、进而推高折现率、导致可收回金额大幅降低，列为减值迹象之一。审计会要求管理层说明：测试里用的折现率，有没有跟着市场利率往上调？折现率每高 1 个点，你刚才已经看到，远期现金流会缩水多少。关心的是：<b>这个假设站得住吗？</b></p>
+
+    <p class="sub">在买方的模型里，同一个数字是什么</p>
+    <p class="prose">同一个折现率，就是 DCF<span class="gloss">（白话：现金流折现法——把一家公司未来每年能赚的现金，一笔一笔折回今天再加总，得出它值多少钱。你刚才做的上手练，就是一个缩小版的 DCF）</span>里的 WACC<span class="gloss">（白话：加权平均资本成本——公司的钱一部分是借来的、一部分是股东的，两边各要求多少回报，按比例加权平均，就是公司"用钱的成本"，也就是买方用的折现率）</span>。区别在于节奏：<b>买方每天都按最新的利率给公司重新定价</b>，股价当天就跌；会计上的减值测试一年才做一次，出现减值迹象才会提前做。所以商誉减值的公告出来时，股价往往早就跌过了。<b>审计问的是"这个折现率站得住吗"，买方问的是"按今天的利率，这家公司还值这么多吗"</b>——问的是同一个数，只是时间点不同。</p>
+
+    <p class="sub">可以带去面试的问题</p>
+    <p class="prose">"<b>过去两年利率上了这么多，贵公司商誉减值测试用的折现率跟着调了吗？如果折现率再涨 1 个百分点，减值空间（headroom）还剩多少？</b>" headroom<span class="gloss">（白话：可收回金额比账面价值多出来的那一截安全垫。安全垫越薄，利率一涨就越容易减值）</span>这个词一出口，问的人就知道你在审计里真看过减值测试底稿，而不只是背过定义；这个问题也把利率、估值和减值串成了一条线。</p>
+
+    <h2>公司拆解 · 英伟达 <span class="h2note">· 科技板块的风向标，下周二发财报</span></h2>
+    <p class="prose prose--lead">英伟达是标普 500 里分量最重的公司之一。今天用上手练的那把尺子，看它为什么对利率这么敏感。</p>
+
+    <p class="sub">商业模式，一句话</p>
+    <p class="prose">设计 AI 芯片和整套服务器系统（自己不建工厂，交给台积电等代工），卖给云厂商和 AI 公司去建数据中心<span class="gloss">（白话：放成千上万台服务器的大机房）</span>。截至 7 月底的那个季度，962 亿美元收入里 <b>890 亿来自数据中心</b>，占九成以上——它几乎就是一家"卖 AI 机房设备"的公司。</p>
+
+    <p class="sub">三个 driver</p>
+    <p class="prose">
+      <b>一、客户的资本开支</b><span class="gloss">（白话：capex，公司为了买长期要用的东西——机房、服务器——花出去的钱）</span>。英伟达的收入，就是微软、谷歌、亚马逊、Meta 这些云厂商的 capex。客户少花一点，它就少卖一点。<br>
+      <b>二、产品换代。</b>每一代新芯片推出时，客户要不要换、换得多快，决定了接下来几个季度的收入曲线。<br>
+      <b>三、定价权。</b>那个季度的毛利率<span class="gloss">（白话：每收 100 元，扣掉造产品的直接成本后还剩多少元）</span>是 <b>75.0%</b>，公司给本季度的指引是 74.0%（上下 0.5 个百分点）。毛利率往下走，说明它的议价能力或者成本在变。
+    </p>
+
+    <p class="sub">三个要看的数（11 月 17 日财报）</p>
+    <p class="prose">
+      <b>数据中心收入。</b>上一季 890 亿美元。公司对本季度的总收入指引是 1,080 亿美元（上下 2%），而且<b>不包含中国的数据中心算力芯片收入</b>。<br>
+      <b>毛利率。</b>指引 74.0%。守住了，说明定价权还在；跌破了，市场会担心竞争。<br>
+      <b>客户的 AI 单位经济</b><span class="gloss">（白话：unit economics，把生意缩小到一个单位算账——这里是客户买的一台 GPU 服务器：花多少钱买、一年能租出去多少钱、几年回本）</span>。英伟达自己卖得很赚钱，但它的客户要靠出租算力把买芯片的钱挣回来，而客户的云毛利率<span class="gloss">（白话：云厂商每收 100 元租金，扣掉电费、机房和服务器折旧之后还剩多少元）</span>决定了这件事划不划算。像第 04 条的 CoreWeave，买芯片的钱大多是借的——<b>利率越高，客户回本越难，最终会传导到英伟达的订单上。</b>回到上手练：英伟达的估值更像"成长公司"那一列，久期长，利率涨 1 个点，它比"稳健公司"晃得厉害。
+    </p>
+
+    <h2>一句英文商业表达</h2>
+    <p class="prose prose--lead">从今天第 01 条里挑的：</p>
+    <p class="en" style="font-size:15px;font-weight:700;margin-bottom:12px">"October's CPI ran hot."</p>
+    <p class="prose"><b>run hot</b> 字面是"跑得很烫"，用在经济数据上，意思是<b>数字高于预期、偏热</b>。通胀、就业、工资这几类数据最常用。</p>
+    <p class="prose"><b>什么时候用：</b>数据公布后的第一句汇报。晨会上、给老板的邮件里、FP&amp;A 向管理层解释"为什么融资成本要往上调"时，一句 "CPI ran hot" 就把结论交代了，然后再讲细节。</p>
+    <p class="prose"><b>为什么比直白说法好：</b>"CPI was higher than expected" 只说了高，没说这意味着什么。ran hot 两个词就带出了"偏热、可能要加息"的弦外之音，懂行的人一听就知道接下来要谈利率。它还能形容整个经济：the economy is running hot（经济过热）。</p>
+    <p class="prose"><b>两个替代说法对照：</b><br>
+      · "<b>came in hotter than expected</b>" —— 意思相同，更正式，适合写进书面报告。<br>
+      · "<b>came in cooler (or softer) than expected</b>" —— 反过来：低于预期，市场通常会解读成"加息压力变小"。知道这一对，你就能听懂大部分数据点评的第一句话。
+    </p>
+
+    <a class="btn" href="https://claude.ai/new?q=%E8%AF%B7%E7%BB%99%E6%88%91%E5%87%BA%E4%B8%80%E9%81%93%E4%B8%8A%E6%89%8B%E7%BB%83%E7%9A%84%E8%BF%9B%E9%98%B6%E9%A2%98%E3%80%82%E8%83%8C%E6%99%AF%EF%BC%9A%E6%88%91%E5%88%9A%E5%81%9A%E5%AE%8C%E4%B8%80%E9%81%93%E7%BB%83%E4%B9%A0%EF%BC%8C%E4%B8%A4%E5%AE%B6%E8%99%9A%E6%9E%84%E5%85%AC%E5%8F%B8%E6%9C%AA%E6%9D%A5%2010%20%E5%B9%B4%E7%9A%84%E7%8E%B0%E9%87%91%E6%B5%81%E5%90%88%E8%AE%A1%E9%83%BD%E6%98%AF%201%2C000%20%E7%99%BE%E4%B8%87%E7%BE%8E%E5%85%83%EF%BC%8C%E7%A8%B3%E5%81%A5%E5%85%AC%E5%8F%B8%E6%AF%8F%E5%B9%B4%20100%EF%BC%8C%E6%88%90%E9%95%BF%E5%85%AC%E5%8F%B8%E4%BB%8E%2020%20%E9%80%90%E5%B9%B4%E5%A2%9E%E5%8A%A0%E5%88%B0%20210%EF%BC%9B%E7%94%A8%208%25%20%E6%8A%98%E7%8E%B0%EF%BC%8C%E7%A8%B3%E5%81%A5%E5%85%AC%E5%8F%B8%E7%8E%B0%E5%80%BC%20671.01%E3%80%81%E6%88%90%E9%95%BF%E5%85%AC%E5%8F%B8%20582.82%EF%BC%8C%E6%8A%98%E7%8E%B0%E7%8E%87%E6%94%B9%E6%88%90%209%25%20%E5%90%8E%E5%88%86%E5%88%AB%E8%B7%8C%204.36%25%20%E5%92%8C%206.02%25%E3%80%82%E8%BF%99%E6%AC%A1%E8%AF%B7%E5%8A%A0%E4%B8%8A%E2%80%9C%E7%AC%AC%2010%20%E5%B9%B4%E4%B9%8B%E5%90%8E%E7%9A%84%E6%B0%B8%E7%BB%AD%E4%BB%B7%E5%80%BC%EF%BC%88%E7%BB%88%E5%80%BC%EF%BC%89%E2%80%9D%E5%92%8C%E2%80%9C%E6%8A%98%E7%8E%B0%E7%8E%87%E4%BB%8E%207%25%20%E5%88%B0%2010%25%20%E7%9A%84%E6%95%8F%E6%84%9F%E6%80%A7%E8%A1%A8%E2%80%9D%EF%BC%8C%E6%95%B0%E6%8D%AE%E6%8E%A7%E5%88%B6%E5%9C%A8%2012%20%E8%A1%8C%E4%BB%A5%E5%86%85%E3%80%82%E6%88%91%E4%B8%8D%E4%BC%9A%20Excel%EF%BC%8C%E6%AF%8F%E4%B8%80%E6%AD%A5%E9%83%BD%E8%A6%81%E5%86%99%E6%B8%85%E6%A5%9A%E7%82%B9%E5%93%AA%E4%B8%AA%E5%8D%95%E5%85%83%E6%A0%BC%E3%80%81%E8%BE%93%E5%85%A5%E4%BB%80%E4%B9%88%E5%85%AC%E5%BC%8F%E3%80%81%E7%84%B6%E5%90%8E%E5%81%9A%E4%BB%80%E4%B9%88%E5%8A%A8%E4%BD%9C%EF%BC%8C%E7%94%A8%E5%88%B0%E7%9A%84%E5%87%BD%E6%95%B0%E5%90%84%E7%94%A8%E4%B8%80%E5%8F%A5%E8%AF%9D%E8%A7%A3%E9%87%8A%E3%80%82%E6%9C%80%E5%90%8E%E7%BB%99%E6%88%91%E4%B8%80%E4%BB%BD%E5%B8%A6%E7%AD%94%E6%A1%88%E7%9A%84%E5%AE%8C%E6%95%B4%E7%BB%83%E4%B9%A0%E3%80%82&amp;surface=cowork&amp;composer=mini">再出一道进阶题</a>
+    <a class="btn" href="https://claude.ai/new?q=%E6%88%91%E6%98%AF%E8%B4%A2%E5%8A%A1%E5%B0%8F%E7%99%BD%E3%80%82%E8%AF%B7%E7%94%A8%E7%94%9F%E6%B4%BB%E9%87%8C%E7%9A%84%E4%BE%8B%E5%AD%90%E7%BB%99%E6%88%91%E8%AE%B2%E6%B8%85%E6%A5%9A%E8%BF%99%E5%87%A0%E4%B8%AA%E8%AF%8D%EF%BC%9ACPI%E3%80%81%E6%A0%B8%E5%BF%83%20CPI%E3%80%81%E5%9B%BD%E5%80%BA%E6%94%B6%E7%9B%8A%E7%8E%87%E3%80%81%E6%97%A0%E9%A3%8E%E9%99%A9%E5%88%A9%E7%8E%87%E3%80%81%E6%8A%98%E7%8E%B0%E7%8E%87%E3%80%81%E7%8E%B0%E5%80%BC%E3%80%81%E4%B9%85%E6%9C%9F%E3%80%81%E5%95%86%E8%AA%89%E5%87%8F%E5%80%BC%E3%80%82%E4%B8%8D%E8%A6%81%E7%94%A8%E5%8F%A6%E4%B8%80%E4%B8%AA%E6%9C%AF%E8%AF%AD%E5%8E%BB%E8%A7%A3%E9%87%8A%E6%9C%AF%E8%AF%AD%EF%BC%8C%E6%AF%8F%E4%B8%AA%E8%AF%8D%E9%85%8D%E4%B8%80%E4%B8%AA%E6%88%91%E8%83%BD%E5%A4%8D%E8%BF%B0%E7%BB%99%E5%88%AB%E4%BA%BA%E5%90%AC%E7%9A%84%E4%BE%8B%E5%AD%90%E3%80%82%E6%9C%80%E5%90%8E%E7%BB%99%E6%88%91%E4%B8%80%E9%A1%B5%E5%8F%AF%E4%BB%A5%E5%AD%98%E4%B8%8B%E6%9D%A5%E7%9A%84%E7%99%BD%E8%AF%9D%E5%AF%B9%E7%85%A7%E8%A1%A8%E3%80%82&amp;surface=cowork&amp;composer=mini">把这几个词讲透</a>
+    <a class="btn" href="https://claude.ai/new?q=%E8%AF%B7%E4%BD%A0%E6%89%AE%E6%BC%94%E6%8A%95%E8%A1%8C%E6%88%96%E4%B9%B0%E6%96%B9%E7%9A%84%E9%9D%A2%E8%AF%95%E5%AE%98%EF%BC%8C%E5%92%8C%E6%88%91%E5%81%9A%E4%B8%80%E5%9C%BA%E6%A8%A1%E6%8B%9F%E9%9D%A2%E8%AF%95%E3%80%82%E8%83%8C%E6%99%AF%E6%98%AF%E5%85%AC%E5%BC%80%E6%95%B0%E6%8D%AE%EF%BC%9A%E7%BE%8E%E5%9B%BD%202026%20%E5%B9%B4%2010%20%E6%9C%88%20CPI%20%E7%8E%AF%E6%AF%94%E4%B8%8A%E6%B6%A8%200.4%25%EF%BC%8C%E9%AB%98%E4%BA%8E%E9%A2%84%E6%9C%9F%EF%BC%8C10%20%E5%B9%B4%E6%9C%9F%E7%BE%8E%E5%9B%BD%E5%9B%BD%E5%80%BA%E6%94%B6%E7%9B%8A%E7%8E%87%E5%9B%9E%E5%88%B0%205%25%20%E5%B7%A6%E5%8F%B3%EF%BC%8C%E5%BD%93%E5%A4%A9%E7%A7%91%E6%8A%80%E8%82%A1%E8%B7%8C%E5%B9%85%E6%9C%80%E5%A4%A7%E3%80%82%E4%BD%A0%E5%8F%AF%E4%BB%A5%E4%B8%8A%E7%BD%91%E6%A0%B8%E5%AF%B9%E8%BF%99%E4%BA%9B%E6%95%B0%E5%AD%97%E3%80%82%E8%AF%B7%E5%9B%B4%E7%BB%95%E2%80%9C%E4%B8%BA%E4%BB%80%E4%B9%88%E6%88%90%E9%95%BF%E8%82%A1%E5%AF%B9%E5%88%A9%E7%8E%87%E6%9B%B4%E6%95%8F%E6%84%9F%E2%80%9D%E2%80%9CDCF%20%E9%87%8C%E7%9A%84%E6%8A%98%E7%8E%B0%E7%8E%87%E6%80%8E%E4%B9%88%E5%AE%9A%E2%80%9D%E2%80%9C%E5%88%A9%E7%8E%87%E4%B8%8A%E5%8D%87%E6%97%B6%EF%BC%8C%E5%AE%A1%E8%AE%A1%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E9%87%8D%E7%9C%8B%E5%95%86%E8%AA%89%E5%87%8F%E5%80%BC%E6%B5%8B%E8%AF%95%E2%80%9D%E8%BF%9E%E7%BB%AD%E8%BF%BD%E9%97%AE%E6%88%91%EF%BC%8C%E6%AF%8F%E6%AC%A1%E5%8F%AA%E9%97%AE%E4%B8%80%E4%B8%AA%E9%97%AE%E9%A2%98%EF%BC%8C%E7%AD%89%E6%88%91%E7%AD%94%E5%AE%8C%E5%86%8D%E8%BF%BD%E9%97%AE%E3%80%82%E7%BB%93%E6%9D%9F%E5%90%8E%E7%BB%99%E6%88%91%E4%B8%80%E4%BB%BD%E4%B9%A6%E9%9D%A2%E7%82%B9%E8%AF%84%EF%BC%9A%E5%93%AA%E9%87%8C%E7%AD%94%E5%BE%97%E5%A5%BD%E3%80%81%E5%93%AA%E9%87%8C%E9%9C%B2%E6%80%AF%E3%80%81%E6%A0%87%E5%87%86%E7%AD%94%E6%B3%95%E6%98%AF%E4%BB%80%E4%B9%88%E3%80%82&amp;surface=cowork&amp;composer=mini">拿利率这道题练面试</a>
+
+  </div>
+</div>
+
+</body>
+</html>
