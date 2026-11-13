@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="brief-edition" content="2026-11-09">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow,noarchive">
+<title>晨间简报 · 2026年11月9日</title>
+<style>
+  :root{
+    --bg:#FCFCFB;
+    --wash:#F9F9F7;
+    --ink:#2E2C27;
+    --ink-soft:#6B6A63;
+    --ink-grey:#B4B3A8;
+    --hairline:#E4E3DC;
+    --edge:#E1E1DF;
+    --clay:#C6613F;
+    --clay-hover:#AE5133;
+    --sans:-apple-system,"Segoe UI",sans-serif;
+    --mono:"SF Mono",Menlo,Consolas,monospace;
+    --serif:"Songti SC","Source Han Serif SC","Noto Serif CJK SC",STSong,Georgia,serif;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0}
+  body{background:var(--bg);color:var(--ink);font-family:var(--sans);
+       -webkit-font-smoothing:antialiased;font-style:normal}
+  .band{width:100%}
+  .band--top{background:var(--wash);border-bottom:1px solid var(--edge)}
+  .band--bottom{background:var(--bg)}
+  .inner{max-width:860px;margin:0 auto;padding:54px 32px 44px}
+  .band--bottom .inner{padding:48px 32px 72px}
+
+  .daydate{font-size:12.5px;letter-spacing:.06em;color:var(--ink-soft);margin:0 0 14px}
+  h1{font-family:var(--serif);font-weight:600;font-size:40px;line-height:1.3;
+     margin:0 0 34px;letter-spacing:-.005em;text-wrap:balance}
+
+  .drawing{display:block;width:100%;height:auto;margin:0 0 6px}
+
+  .acts{display:flex;margin-top:22px}
+  .act{flex:1 1 0;padding:0 26px}
+  .act:first-child{padding-left:0}
+  .act:last-child{padding-right:0}
+  .act + .act{border-left:1px solid var(--hairline)}
+  .act__time{font-size:12.5px;font-weight:700;letter-spacing:.02em;margin:0 0 7px}
+  .act__line{font-size:13.5px;line-height:1.62;color:var(--ink-soft);margin:0}
+
+  h2{font-size:12.5px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;
+     color:var(--ink);margin:46px 0 20px}
+  h2:first-of-type{margin-top:0}
+  h2 .h2note{text-transform:none;letter-spacing:0;font-weight:400;color:var(--ink-grey)}
+
+  ol,ul{list-style:none;margin:0;padding:0}
+  .item{display:flex;gap:16px;padding:0 0 26px}
+  .item__num{flex:0 0 18px;font-size:12.5px;color:var(--ink-grey);
+             line-height:1.75;font-variant-numeric:tabular-nums}
+  .item__body{flex:1 1 auto;min-width:0}
+  .item__title{font-size:15px;font-weight:700;line-height:1.55;margin:0 0 5px}
+
+  .en{font-size:14px;line-height:1.68;color:var(--ink);margin:0 0 9px}
+  .en b{font-weight:700}
+  .zh{font-size:13.5px;line-height:1.7;color:var(--ink-soft);margin:0;
+      padding-left:13px;border-left:1px solid var(--hairline)}
+  .zh b{color:var(--ink);font-weight:600}
+
+  .gloss{font-size:12.5px;color:var(--ink-soft);font-weight:400}
+
+  .prose{font-size:14px;line-height:1.75;color:var(--ink-soft);margin:0 0 14px}
+  .prose b{color:var(--ink);font-weight:600}
+  .prose--lead{margin-bottom:18px}
+
+  .sub{font-size:13px;font-weight:700;color:var(--ink);margin:20px 0 8px;letter-spacing:.01em}
+
+  .step{display:flex;gap:13px;padding:0 0 13px;font-size:13.5px;line-height:1.72;color:var(--ink-soft)}
+  .step__n{flex:0 0 17px;color:var(--clay);font-weight:700;font-variant-numeric:tabular-nums}
+  .step__b{flex:1 1 auto;min-width:0}
+  .step__b b{color:var(--ink);font-weight:600}
+  .formula{font-family:var(--mono);font-size:12.5px;background:var(--wash);
+           border:1px solid var(--hairline);border-radius:3px;padding:1.5px 5px;
+           color:var(--ink);white-space:nowrap}
+
+  .tablewrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:12px 0 4px}
+  table.grid{border-collapse:collapse;width:100%;min-width:400px;
+             font-size:12.5px;color:var(--ink-soft);font-variant-numeric:tabular-nums}
+  table.grid th{text-align:left;font-weight:600;color:var(--ink);
+                border-bottom:1px solid var(--hairline);padding:6px 10px 6px 0}
+  table.grid td{border-bottom:1px solid var(--hairline);padding:6px 10px 6px 0}
+  table.grid th:nth-child(n+3),table.grid td:nth-child(n+3){text-align:right;padding-right:0}
+
+  .btn{display:inline-block;margin:12px 6px 0 0;background:var(--clay);border:1px solid var(--clay);
+       border-radius:8px;padding:9px 16px;font-family:var(--sans);font-weight:500;font-size:13px;
+       color:#FCFCFB;text-decoration:none;line-height:1.2}
+  .btn:hover{background:var(--clay-hover);border-color:var(--clay-hover)}
+
+  @media (max-width:640px){
+    .inner{padding:38px 20px 32px}
+    .band--bottom .inner{padding:34px 20px 52px}
+    h1{font-size:30px;margin-bottom:26px}
+    .acts{display:block}
+    .act{padding:0}
+    .act + .act{border-left:0;border-top:1px solid var(--hairline);margin-top:18px;padding-top:18px}
+    .formula{white-space:normal}
+  }
+
+  @media print{
+    .item,.act,.drawing,.tablewrap,.step,h2,h3{break-inside:avoid;page-break-inside:avoid}
+    h2,h3{break-after:avoid;page-break-after:avoid}
+    .btn{display:none}
+  }
+</style>
+<script src="live.js?v=3" defer></script>
+</head>
+<body>
+
+<div class="band band--top">
+  <div class="inner">
+    <!-- brief-nav --><style>@media print{.brief-nav{display:none!important}}</style><p class="brief-nav" style="float:right;margin:0 0 0 16px;font-size:12.5px;line-height:1.5;color:#B4B3A8"><a href="archive.html" style="color:#6B6A63;text-decoration:underline;text-decoration-color:#E4E3DC;text-underline-offset:3px">往期目录</a> · <a href="2026-11-09%20%E6%99%A8%E9%97%B4%E7%AE%80%E6%8A%A5.pdf" style="color:#6B6A63;text-decoration:underline;text-decoration-color:#E4E3DC;text-underline-offset:3px">PDF</a> · <a href="2026-11-09%20%E4%B8%8A%E6%89%8B%E7%BB%83.xlsx" style="color:#6B6A63;text-decoration:underline;text-decoration-color:#E4E3DC;text-underline-offset:3px">练习表</a></p><!-- /brief-nav -->
+    <p class="daydate">2026年11月9日 · 星期一 · 11月13日补发</p>
+    <h1>Carl，今天只讲一件事：伯克希尔的利润少了 28%，生意其实只少了 6%。</h1>
+
+    <svg class="drawing" viewBox="0 0 840 180" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path d="M 0,82 C 20,81 40,80 60,80 C 150,80 240,53 330,53
+               C 380,53 430,137 480,137 C 530,137 580,131 630,131
+               C 690,131 740,131 790,131 L 840,131"
+            fill="none" stroke="#2E2C27" stroke-width="1.6" stroke-linecap="round"/>
+      <circle cx="60"  cy="80"  r="6"  fill="#B4B3A8"/>
+      <circle cx="330" cy="53"  r="7"  fill="#2E2C27"/>
+      <circle cx="480" cy="137" r="12" fill="#2E2C27"/>
+      <circle cx="630" cy="131" r="8"  fill="#2E2C27"/>
+      <circle cx="790" cy="131" r="7.5" fill="#F9F9F7" stroke="#C6613F" stroke-width="1.8"/>
+      <text x="60"  y="166" text-anchor="middle" font-family="-apple-system,sans-serif" font-size="11" fill="#B4B3A8">10/30 周五 7,580</text>
+      <text x="330" y="166" text-anchor="middle" font-family="-apple-system,sans-serif" font-size="11" fill="#B4B3A8">11/4 周三 大选后上涨</text>
+      <text x="480" y="166" text-anchor="middle" font-family="-apple-system,sans-serif" font-size="11" fill="#B4B3A8">11/5 周四 −4.4%</text>
+      <text x="630" y="166" text-anchor="middle" font-family="-apple-system,sans-serif" font-size="11" fill="#B4B3A8">11/6 周五 7,377</text>
+      <text x="790" y="166" text-anchor="middle" font-family="-apple-system,sans-serif" font-size="11" fill="#C6613F">周二 CPI</text>
+    </svg>
+
+    <div class="acts">
+      <div class="act">
+        <p class="act__time">7:30 — 7:36 AM</p>
+        <p class="act__line">上面那条线是标普 500 上一周的收盘：周四一天跌 4.4%，全周收跌 2.7%。五条资讯里第一条是主线：账面上的涨跌，什么时候算进利润。</p>
+      </div>
+      <div class="act">
+        <p class="act__time">7:36 — 7:46 AM</p>
+        <p class="act__line">打开配套的 xlsx，用一张八行的持仓表亲手算出"同样是亏，为什么只有一部分进了利润表"。</p>
+      </div>
+      <div class="act">
+        <p class="act__time">7:46 — 7:50 AM</p>
+        <p class="act__line">同一笔亏损，审计看它被放进了哪个篮子，买方把三个篮子全部按市价重算一遍；再用这把尺子量伯克希尔。</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="band band--bottom">
+  <div class="inner">
+
+    <h2>今日商业资讯 <span class="h2note">· 英文在上，中文在下</span></h2>
+    <ol>
+      <li class="item" style="break-inside:auto;page-break-inside:auto">
+        <div class="item__num">01</div>
+        <div class="item__body">
+          <p class="item__title">这是今天的主线：净利润少了 28%，经营利润只少了 6%</p>
+          <p class="en">Berkshire Hathaway's third-quarter net earnings <span class="gloss">（白话：净利润——所有收入减掉所有成本、费用和税之后，最后剩下的钱）</span> fell <b>28%</b> to $22.1 billion, yet operating earnings <span class="gloss">（白话：经营利润——伯克希尔自己的口径，只算保险、铁路、能源这些生意本身赚的钱，不算股票的涨跌）</span> slipped only about <b>6%</b>, to $12.7 billion. The gap is not the business. Accounting rules run unrealized gains and losses <span class="gloss">（白话：浮盈浮亏——股票还没卖，只是按现在的市价算，比之前多了或少了多少）</span> on shares Berkshire still holds straight through net income, and those paper gains were smaller than a year ago. Strip out the swings in the portfolio, and the business barely moved.</p>
+          <p class="zh">伯克希尔三季度净利润 221 亿美元，同比<span class="gloss">（白话：和去年同一个季度比）</span>少了 <b>28%</b>；经营利润 127 亿美元，只少了约 <b>6%</b>。差出来的那一大截不是生意变差了，而是持仓股票的账面涨跌：按会计准则，还没卖的股票涨了跌了，也要算进净利润，而今年三季度的账面收益比去年同期少。两个数相减，今年约 94 亿美元，去年约 173 亿。公司自己也提醒投资者不要理会这部分波动。<b>这条改变的看法是：读一家手里拿着大量股票的公司，净利润这一行要先拆开，再判断生意是好是坏。</b></p>
+        </div>
+      </li>
+      <li class="item">
+        <div class="item__num">02</div>
+        <div class="item__body">
+          <p class="item__title">上周四：2025 年 4 月以来最差的一天</p>
+          <p class="en">Last Thursday was the worst day for U.S. stocks since April 2025. The S&amp;P 500 lost <b>4.4%</b>, the Dow fell more than 1,800 points, or <b>3.4%</b>, and the Nasdaq tumbled <b>5.5%</b>, sliding into correction territory <span class="gloss">（白话：回调——从最近的高点跌掉 10% 以上，华尔街就把它叫作"回调"）</span>. The trigger was not earnings. After Democrats' sweeping midterm wins, investors began to price in slower data-center construction; Micron and AMD each dropped about 17%, and the Magnificent Seven <span class="gloss">（白话：美股七巨头——苹果、微软、英伟达、谷歌、亚马逊、Meta、特斯拉）</span> shed roughly $1 trillion in market value <span class="gloss">（白话：市值——股价乘以总股数，也就是按现在的价格，整家公司值多少钱）</span> in a single session.</p>
+          <p class="zh">上周四是美股 2025 年 4 月以来最差的一天：标普 500 跌 4.4%，道指跌超 1,800 点（3.4%），纳斯达克跌 5.5%，进入"回调"。起因不是财报：民主党在中期选举中大胜，市场开始担心数据中心的建设会被放慢。美光和 AMD 各跌约 17%，"七巨头"一天少了约 1 万亿美元市值。<b>和主线的关系：</b>这 1 万亿里，绝大部分股票并没有人卖出，也没有现金易手；但凡是按市价记账的持有人，账上已经少了这么多。</p>
+        </div>
+      </li>
+      <li class="item">
+        <div class="item__num">03</div>
+        <div class="item__body">
+          <p class="item__title">周五的反弹很窄，全周收跌</p>
+          <p class="en">Friday's rebound was narrow. The S&amp;P 500 rose <b>0.3%</b> to 7,376.86 and the Nasdaq gained <b>1.1%</b> to 24,579.42, but the Dow slipped <b>0.5%</b> to 51,285.73. For the week, the S&amp;P 500 ended down <b>2.7%</b>, the Nasdaq <b>3.4%</b> and the Dow <b>0.9%</b>.</p>
+          <p class="zh">周五的反弹很窄：标普 500 涨 0.3% 收 7,376.86，纳斯达克涨 1.1% 收 24,579.42，道指却跌 0.5% 收 51,285.73。全周算下来，标普跌 2.7%，纳斯达克跌 3.4%，道指跌 0.9%。<b>读法：</b>一天跌 4.4%、一周只跌 2.7%，是因为周三大选后那一波上涨和周五的反弹抵掉了一部分。看行情要分清"一天的数"和"一周的数"，这两个数经常被混着引用。</p>
+        </div>
+      </li>
+      <li class="item">
+        <div class="item__num">04</div>
+        <div class="item__body">
+          <p class="item__title">就业太强，市场开始押 12 月加息</p>
+          <p class="en">The October jobs report, released Friday, was far stronger than expected: employers added <b>165,000</b> jobs against forecasts of 59,000, and the unemployment rate edged down to 4.1%. The Fed's policy rate <span class="gloss">（白话：政策利率——美联储定的基准利率，其他各种利率都跟着它走）</span> stands at 3.75%–4.00%, and two officials already dissented in favor of a hike last month. Futures markets <span class="gloss">（白话：期货市场——大家用真金白银押注"未来某个数会是多少"的市场，从押注的价格可以反推出市场认为加息的可能性有多大）</span> now put the odds of a December increase at roughly 70% to 80%.</p>
+          <p class="zh">周五公布的 10 月就业报告远强于预期：新增就业 16.5 万人，预期只有 5.9 万；失业率小降到 4.1%。美联储的政策利率目前在 3.75%~4.00%，上个月开会时已经有两位官员投票主张加息；期货市场现在认为 12 月加息的可能性大约在七到八成。<b>和主线的关系：</b>利率往上走，已经发行的旧债券就会跌价——新债给的利息更高，旧债只有降价才卖得出去。上手练里那几行债券的浮亏就是这么来的。</p>
+        </div>
+      </li>
+      <li class="item">
+        <div class="item__num">05</div>
+        <div class="item__body">
+          <p class="item__title">这周：周二 CPI，然后是 AI 建设链上的三份财报</p>
+          <p class="en">This week's test comes Tuesday: October CPI <span class="gloss">（白话：居民消费价格指数——老百姓买同一篮子东西，比之前贵了多少）</span> is due at 8:30 a.m. Eastern, with economists looking for a <b>0.3%</b> monthly rise after September's 0.6%. Earnings follow from companies at the center of the AI build-out — CoreWeave on Tuesday after the close, Cisco and Applied Materials on Thursday — and PPI <span class="gloss">（白话：生产者价格指数——工厂和批发商卖货的价格涨了多少，可以理解成"企业进货的物价"）</span> lands on Friday.</p>
+          <p class="zh">这周的考验在周二：10 月 CPI 北京时间周二晚 21:30 公布，经济学家预期环比<span class="gloss">（白话：和上一个月比）</span>上涨 0.3%，9 月是 0.6%。之后是 AI 建设链上的几份财报：CoreWeave 周二盘后，思科和应用材料周四盘后；周五还有 PPI。<b>和主线的关系：</b>通胀数字影响利率，利率影响债券和成长股的价格——也就决定了下一份报表里，各家公司账上的浮盈浮亏是多少。</p>
+        </div>
+      </li>
+    </ol>
+
+    <h2>上手练 · 十分钟 <span class="h2note">· 场景来自第 01 和第 02 条</span></h2>
+    <p class="prose prose--lead">配套表格 <b>「2026-11-09 上手练.xlsx」</b>：点页面右上角的「练习表」下载；看 PDF 的话，它和 PDF 在同一个文件夹里。打开它，跟着下面一步一步按。<b>每一步都写了点哪个格、输入什么</b>，不需要你事先会任何函数。</p>
+
+    <p class="prose">背景：一家<b>虚构的</b>保险公司，手里有八笔投资，单位是百万元。上周市场大跌，每一笔都亏了。B 列写的是会计上"这笔资产的涨跌记到哪里"——一共三种，先不用懂，做完就明白了。你要回答：<b>这一周总共亏了多少？其中多少会出现在利润表上？利润会因此少掉多少？</b></p>
+
+    <div class="tablewrap">
+      <table class="grid">
+        <thead>
+          <tr><th>行</th><th>A 资产</th><th>B 涨跌记到哪里</th><th>C 周初市值</th><th>D 本周涨跌幅</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>2</td><td>科技股组合</td><td>利润表</td><td>2,000</td><td>−6.0%</td></tr>
+          <tr><td>3</td><td>半导体基金</td><td>利润表</td><td>800</td><td>−13.0%</td></tr>
+          <tr><td>4</td><td>银行股（长期持有）</td><td>其他综合收益</td><td>3,000</td><td>−1.5%</td></tr>
+          <tr><td>5</td><td>电力股（长期持有）</td><td>其他综合收益</td><td>1,200</td><td>−8.0%</td></tr>
+          <tr><td>6</td><td>国债（随时可能卖）</td><td>其他综合收益</td><td>5,000</td><td>−0.6%</td></tr>
+          <tr><td>7</td><td>公司债（随时可能卖）</td><td>其他综合收益</td><td>2,500</td><td>−0.8%</td></tr>
+          <tr><td>8</td><td>国债（打算拿到期）</td><td>摊余成本</td><td>9,000</td><td>−0.7%</td></tr>
+          <tr><td>9</td><td>地方政府债（打算拿到期）</td><td>摊余成本</td><td>6,000</td><td>−0.5%</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="prose" style="margin-top:10px">表格下方还有一个已知数：这家公司这一季的经营利润是 <b>400</b>（在 C17）。</p>
+
+    <p class="sub">第一步 · 每一笔这周亏了多少</p>
+    <div class="step"><div class="step__n">①</div><div class="step__b">点一下 <b>E2</b>，输入 <span class="formula">=C2*D2</span>，按回车。<span class="formula">*</span> 是乘号：周初市值 × 涨跌幅 = 这一笔本周的账面盈亏。E2 应该出现 <b>−120</b>。</div></div>
+    <div class="step"><div class="step__n">②</div><div class="step__b">再点一下 E2 选中它，把鼠标移到这个格<b>右下角的小方块</b>上，光标变成<b>细实心十字</b>时<b>双击</b>。公式会自动填满 E3 到 E9。</div></div>
+    <div class="step"><div class="step__n">③</div><div class="step__b">点 <b>E10</b>，输入 <span class="formula">=SUM(E2:E9)</span>，回车。<span class="formula">SUM</span> 就是"把这一串格子加起来"。应该得到 <b>−508</b>：整个组合这一周少掉的钱。</div></div>
+
+    <p class="sub">第二步 · 按"记到哪里"分成三堆</p>
+    <div class="step"><div class="step__n">④</div><div class="step__b">点 <b>E12</b>，输入 <span class="formula">=SUMIF(B$2:B$9,A12,E$2:E$9)</span>，回车。<span class="formula">SUMIF</span> 的意思是"只把符合条件的那几行加起来"：在 B2 到 B9 里找和 A12 写得一样的字（"利润表"），找到哪几行，就把那几行的 E 列加起来。<span class="formula">$</span> 的意思是"往下填充时，这个行号不许跟着变"。E12 应该得到 <b>−224</b>。</div></div>
+    <div class="step"><div class="step__n">⑤</div><div class="step__b">点 E12 选中它，鼠标移到右下角的小方块上，变成细十字后<b>按住往下拖到 E14</b> 再松手（这里双击不管用，因为旁边一列是空的）。E13 应该是 <b>−191</b>，E14 应该是 <b>−93</b>。</div></div>
+    <div class="step"><div class="step__n">⑥</div><div class="step__b">点 <b>E15</b>，输入 <span class="formula">=SUM(E12:E14)</span>，回车。它应该和 E10 一模一样，都是 −508。养成这个习惯：分完堆再加回去，对得上才说明没有漏掉哪一行。</div></div>
+
+    <p class="sub">第三步 · 看利润表上会发生什么</p>
+    <div class="step"><div class="step__n">⑦</div><div class="step__b">点 <b>C18</b>，输入 <span class="formula">=C17+E12</span>，回车。经营利润 400，加上"记进利润表"的那一堆（它是负数），就是报表上最后显示的利润：<b>176</b>。</div></div>
+    <div class="step"><div class="step__n">⑧</div><div class="step__b">点 <b>C19</b>，输入 <span class="formula">=C18/C17-1</span>，回车，再点上方「开始」选项卡里的 <span class="formula">%</span> 按钮。应该得到 <b>−56%</b>。</div></div>
+
+    <p class="sub">做完再看这三个考点</p>
+    <p class="prose">
+      <b>考点一：总共亏了 508，只有 224 进了利润表。</b>整个组合 29,500，一周少了 508，约 1.7%。但三堆的去向完全不同：<b>−224</b> 记进利润表；<b>−191</b> 记进"其他综合收益"；<b>−93</b> 那一堆按"摊余成本"记账，账上一分钱都不体现。<br><br>
+      <b>考点二：生意一点没变，利润少了一半多。</b>经营利润是 400，报表上的利润变成 <b>176</b>，少了 <b>56%</b>。这就是伯克希尔"净利润少 28%、经营利润只少 6%"的缩小版。反过来也一样：股市大涨的季度，利润会凭空多出一大块，同样不代表生意变好了。<br><br>
+      <b>考点三：没进利润表的 284，不等于没亏。</b>其中 191 虽然不算利润，但会直接减少净资产<span class="gloss">（白话：公司所有的资产减掉所有的欠债，剩下属于股东的那部分）</span>；另外 93 连净资产都不动。可债券是真的跌价了：只要公司哪天急着用钱、不得不提前卖掉，这些浮亏当场变成真亏。2023 年美国硅谷银行倒闭前，账上就压着大笔还没进利润表的债券浮亏；储户集中取钱，它不得不卖债券换现金，浮亏变成了真亏。
+    </p>
+
+    <h2>会计 → 估值桥梁 <span class="h2note">· 科目：金融资产的三个篮子</span></h2>
+    <p class="prose prose--lead">你刚才按 B 列分出来的三堆，就是会计准则给股票、债券这类资产准备的三个篮子。<b>同一笔亏损，放进哪个篮子，决定了它出现在报表的哪一行——或者根本不出现。</b></p>
+
+    <p class="sub">先讲这个科目是什么</p>
+    <p class="prose">公司买的股票和债券，在账上统称金融资产，分三种记法：<br>
+      <b>第一个篮子：按市价记，涨跌进利润表。</b>市价在准则里叫公允价值<span class="gloss">（白话：现在拿到市场上卖，能卖多少钱）</span>。报表上常见的名字是"交易性金融资产"。<br>
+      <b>第二个篮子：按市价记，涨跌不进利润表，进"其他综合收益"</b><span class="gloss">（白话：利润表之外的一个暂存抽屉，涨跌先记在这里，会直接增减净资产，但不算这一期的利润）</span>。<br>
+      <b>第三个篮子：不看市价，按"摊余成本"记</b><span class="gloss">（白话：大致就是买入时的价钱，加上按时间慢慢记进来的利息；市场价怎么变，账上都不跟着动）</span>。<br>
+      进哪个篮子，看两件事：这笔资产带来的是不是"按期收回本金和利息"这样的钱（只有债券这类才可能进第三个篮子），以及公司打算怎么用它——拿着收利息，还是随时准备卖。股票默认进第一个篮子；国际和中国的准则允许公司在买入时声明，把某只打算长期持有的股票放进第二个篮子，选了就不能反悔。美国的准则更严，股票的涨跌一律进利润表，没有第二个篮子可选——所以伯克希尔的净利润才会跟着股市大起大落。</p>
+
+    <p class="sub">在审计底稿里，它是什么</p>
+    <p class="prose">两件<b>要核对的事</b>。一是分类：篮子是买入那天按"打算怎么用"定下来的，不能等跌了再把它挪进不影响利润的篮子。二是价格：期末那一天的市价取得对不对——有公开报价的最好查，没有报价、要靠模型估出来的最难，也最容易出问题。关心的是：<b>每一笔资产有没有放进它该进的篮子，期末那天的价格有没有取对。</b></p>
+
+    <p class="sub">在买方的模型里，同一组数字是什么</p>
+    <p class="prose">买方不管篮子，只做两个动作。<b>第一，把利润里的浮盈浮亏剔掉</b>，只看生意本身赚了多少——伯克希尔的"经营利润"就是公司替你剔好的数。<b>第二，反过来把三个篮子全部按市价重算一遍</b>，看净资产到底还剩多少，包括第三个篮子里账上根本没体现的那部分。审计保证的是每个篮子里的数按规则记对了；买方问的是：如果明天全部按市价卖掉，这家公司还值多少。</p>
+    <p class="prose">你的独家优势在这里：银行、保险、券商的报表上，这三个篮子是最大的几个数。别人看到的是三个合计，你知道合计下面的每一笔是怎么分类、价格是从哪里取来的。</p>
+
+    <p class="sub">可以带去面试的问题</p>
+    <p class="prose">"<b>贵公司的净利润里，有多少是持仓的浮盈浮亏？如果把按成本记账的那部分债券也按今天的市价重估，净资产会少多少？</b>" 前半句问的是考点二，后半句问的是考点三。能问出后半句，说明你知道报表上没写出来的那部分在哪里。</p>
+
+    <h2>公司拆解 · 伯克希尔·哈撒韦（Berkshire Hathaway）</h2>
+    <p class="prose prose--lead">用上手练的思路，读它上周六公布的三季度数字。</p>
+
+    <p class="sub">商业模式，一句话</p>
+    <p class="prose">保险公司先收保费、以后才赔付，中间这笔暂时归它支配的钱叫浮存金（float）。伯克希尔拿这笔钱去买整家公司和股票。<b>保险是水源，投资决定水往哪里流。</b>今年 1 月起，CEO 由格雷格·阿贝尔（Greg Abel）接任；巴菲特 9 月卸任董事长，现在是名誉董事长。</p>
+
+    <p class="sub">三个 driver</p>
+    <p class="prose">
+      <b>一、保险本身赚不赚钱。</b>三季度承保利润<span class="gloss">（白话：收的保费减去赔款和日常开销，保险这门生意本身赚的钱，不包括拿保费去投资赚的）</span> 13.5 亿美元，去年同期 23.7 亿；其中车险公司 GEICO 是 9.82 亿，去年 17.7 亿。原因是 GEICO 为了把前几年流失的客户抢回来，主动降了保费，赔付率<span class="gloss">（白话：每收 100 元保费，赔出去多少元）</span>从 71.5% 升到 76.6%。经营利润那 6% 的下滑，主要就出在这里。<br>
+      <b>二、买下来的实业。</b>铁路、能源、制造、零售。今年花 94 亿美元买下西方石油的化工业务，68 亿美元买下住宅建筑商 Taylor Morrison。三季度总收入增长 11%，到 1,056.5 亿美元。这部分的利润不跟着股市走。<br>
+      <b>三、股票组合。</b>9 月底持有约 3,355 亿美元的股票，包括苹果、美国运通和 Alphabet。这部分的涨跌，就是第 01 条里净利润和经营利润之间的那道缝。粗算一下：3,355 亿的持仓如果跟着标普上周跌 2.7%，就是约 90 亿美元，差不多等于整个三季度的账面收益（约 94 亿）。这只是按指数粗算，它的持仓和指数并不一样。
+    </p>
+
+    <p class="sub">三个要看的数</p>
+    <p class="prose">
+      <b>经营利润</b>：127 亿美元，同比少约 6%。看它，不看净利润。要记住它是公司自己定义的口径<span class="gloss">（白话：英文叫 non-GAAP，公司在正式准则之外另算的一个数，会剔掉它认为"不代表日常经营"的项目）</span>，剔掉了什么要自己看清楚。<br>
+      <b>回购</b><span class="gloss">（白话：公司用自己的现金把市面上自家的股票买回来注销，剩下的每一股对应的生意就变多了）</span>：三季度 96 亿美元，今年早些时候 48 亿，10 月又买了约 20 亿。伯克希尔只在认为股价低于公司真实价值时才回购，所以回购金额本身是一个信号。<br>
+      <b>现金</b>：两家通讯社报的数不一样，3,774 亿和 3,569 亿美元；有报道提到，差的约 205 亿是已经买入、还没付款的国库券。哪个口径都说明同一件事：它手里的现金比持有的股票还多，在等更便宜的价格。
+    </p>
+
+    <h2>一句英文商业表达</h2>
+    <p class="prose prose--lead">从今天第 01 条里挑的：</p>
+    <p class="en" style="font-size:15px;font-weight:700;margin-bottom:12px">"Strip out the swings in the portfolio, and the business barely moved."</p>
+    <p class="prose"><b>strip out</b> 是"把……剔掉再看"。一个数字里混着不属于日常经营的东西——一次性的收入、汇率变动、持仓的浮盈浮亏——先把它们拿掉，再比较剩下的部分。</p>
+    <p class="prose"><b>什么时候用：</b>解释"表面数字"和"真实经营"之间的差别。FP&amp;A 做月度复盘、投行写财报点评，几乎每一份都要做这个动作。</p>
+    <p class="prose"><b>为什么比直白说法好：</b>说 "excluding investment gains, earnings fell 6%" 只是在交代口径。"Strip out X, and Y" 自带一个转折：剔掉之后，结论和表面上看到的不一样了。</p>
+    <p class="prose"><b>两个替代说法对照：</b><br>
+      · "<b>on an underlying basis</b>" —— 更书面，英式财报里常见，意思是"按剔除干扰项之后的口径"。<br>
+      · "<b>excluding one-offs</b>" —— 更简短，适合写在表头和脚注里；one-offs 指只发生一次的项目。
+    </p>
+
+    <a class="btn" href="https://claude.ai/new?q=%E8%AF%B7%E7%BB%99%E6%88%91%E5%87%BA%E4%B8%80%E9%81%93%E4%B8%8A%E6%89%8B%E7%BB%83%E7%9A%84%E8%BF%9B%E9%98%B6%E9%A2%98%E3%80%82%E8%83%8C%E6%99%AF%EF%BC%9A%E6%88%91%E5%88%9A%E5%81%9A%E5%AE%8C%E4%B8%80%E9%81%93%E7%BB%83%E4%B9%A0%E2%80%94%E2%80%94%E4%B8%80%E5%AE%B6%E8%99%9A%E6%9E%84%E7%9A%84%E4%BF%9D%E9%99%A9%E5%85%AC%E5%8F%B8%E6%9C%89%E5%85%AB%E7%AC%94%E6%8A%95%E8%B5%84%EF%BC%8C%E5%88%86%E5%88%AB%E6%8C%89%E2%80%9C%E6%B6%A8%E8%B7%8C%E8%BF%9B%E5%88%A9%E6%B6%A6%E8%A1%A8%E2%80%9D%E2%80%9C%E6%B6%A8%E8%B7%8C%E8%BF%9B%E5%85%B6%E4%BB%96%E7%BB%BC%E5%90%88%E6%94%B6%E7%9B%8A%E2%80%9D%E2%80%9C%E6%8C%89%E6%91%8A%E4%BD%99%E6%88%90%E6%9C%AC%E8%AE%B0%E8%B4%A6%E2%80%9D%E4%B8%89%E7%A7%8D%E6%96%B9%E5%BC%8F%E8%AE%B0%E8%B4%A6%EF%BC%8C%E4%B8%80%E5%91%A8%E5%86%85%E8%B4%A6%E9%9D%A2%E5%85%B1%E4%BA%8F%20508%20%E7%99%BE%E4%B8%87%E5%85%83%EF%BC%8C%E5%85%B6%E4%B8%AD%E5%8F%AA%E6%9C%89%20224%20%E8%BF%9B%E4%BA%86%E5%88%A9%E6%B6%A6%E8%A1%A8%EF%BC%8C%E7%BB%8F%E8%90%A5%E5%88%A9%E6%B6%A6%20400%20%E5%9B%A0%E6%AD%A4%E5%8F%98%E6%88%90%E6%8A%A5%E8%A1%A8%E5%88%A9%E6%B6%A6%20176%E3%80%82%E8%BF%99%E6%AC%A1%E8%AF%B7%E5%8A%A0%E4%B8%8A%E2%80%9C%E5%8D%96%E5%87%BA%E2%80%9D%EF%BC%9A%E5%85%B6%E4%B8%AD%E4%B8%A4%E7%AC%94%E8%B5%84%E4%BA%A7%E5%9C%A8%E6%9C%9F%E6%9C%AB%E8%A2%AB%E5%8D%96%E6%8E%89%EF%BC%8C%E8%AE%A9%E6%88%91%E7%AE%97%E5%87%BA%E5%B7%B2%E5%AE%9E%E7%8E%B0%E5%92%8C%E6%9C%AA%E5%AE%9E%E7%8E%B0%E7%9A%84%E7%9B%88%E4%BA%8F%E5%90%84%E6%98%AF%E5%A4%9A%E5%B0%91%E3%80%81%E5%88%86%E5%88%AB%E5%87%BA%E7%8E%B0%E5%9C%A8%E6%8A%A5%E8%A1%A8%E7%9A%84%E5%93%AA%E9%87%8C%E3%80%82%E6%95%B0%E6%8D%AE%E9%9B%86%E6%8E%A7%E5%88%B6%E5%9C%A8%2010%20%E8%A1%8C%E4%BB%A5%E5%86%85%E3%80%82%E6%88%91%E4%B8%8D%E4%BC%9A%20Excel%EF%BC%8C%E6%AF%8F%E4%B8%80%E6%AD%A5%E9%83%BD%E8%A6%81%E5%86%99%E6%B8%85%E6%A5%9A%E7%82%B9%E5%93%AA%E4%B8%AA%E5%8D%95%E5%85%83%E6%A0%BC%E3%80%81%E8%BE%93%E5%85%A5%E4%BB%80%E4%B9%88%E5%85%AC%E5%BC%8F%E3%80%81%E7%84%B6%E5%90%8E%E5%81%9A%E4%BB%80%E4%B9%88%E5%8A%A8%E4%BD%9C%EF%BC%8C%E7%94%A8%E5%88%B0%E7%9A%84%E5%87%BD%E6%95%B0%E5%90%84%E7%94%A8%E4%B8%80%E5%8F%A5%E8%AF%9D%E8%A7%A3%E9%87%8A%E3%80%82%E6%9C%80%E5%90%8E%E7%BB%99%E6%88%91%E4%B8%80%E4%BB%BD%E5%B8%A6%E7%AD%94%E6%A1%88%E7%9A%84%E5%AE%8C%E6%95%B4%E7%BB%83%E4%B9%A0%E3%80%82&amp;surface=cowork&amp;composer=mini">再出一道进阶题</a>
+    <a class="btn" href="https://claude.ai/new?q=%E6%88%91%E6%98%AF%E8%B4%A2%E5%8A%A1%E5%B0%8F%E7%99%BD%E3%80%82%E8%AF%B7%E7%94%A8%E7%94%9F%E6%B4%BB%E9%87%8C%E7%9A%84%E4%BE%8B%E5%AD%90%E7%BB%99%E6%88%91%E8%AE%B2%E6%B8%85%E6%A5%9A%E8%BF%99%E5%87%A0%E4%B8%AA%E8%AF%8D%E7%9A%84%E5%8C%BA%E5%88%AB%EF%BC%9A%E5%85%AC%E5%85%81%E4%BB%B7%E5%80%BC%E3%80%81%E6%B5%AE%E7%9B%88%E6%B5%AE%E4%BA%8F%E3%80%81%E5%B7%B2%E5%AE%9E%E7%8E%B0%E5%92%8C%E6%9C%AA%E5%AE%9E%E7%8E%B0%E3%80%81%E5%85%B6%E4%BB%96%E7%BB%BC%E5%90%88%E6%94%B6%E7%9B%8A%E3%80%81%E6%91%8A%E4%BD%99%E6%88%90%E6%9C%AC%E3%80%81%E5%87%80%E8%B5%84%E4%BA%A7%E3%80%81%E7%BB%8F%E8%90%A5%E5%88%A9%E6%B6%A6%E5%92%8C%E5%87%80%E5%88%A9%E6%B6%A6%E3%80%82%E4%B8%8D%E8%A6%81%E7%94%A8%E5%8F%A6%E4%B8%80%E4%B8%AA%E6%9C%AF%E8%AF%AD%E5%8E%BB%E8%A7%A3%E9%87%8A%E6%9C%AF%E8%AF%AD%EF%BC%8C%E6%AF%8F%E4%B8%AA%E8%AF%8D%E9%85%8D%E4%B8%80%E4%B8%AA%E6%88%91%E8%83%BD%E5%A4%8D%E8%BF%B0%E7%BB%99%E5%88%AB%E4%BA%BA%E5%90%AC%E7%9A%84%E4%BE%8B%E5%AD%90%E3%80%82%E6%9C%80%E5%90%8E%E7%BB%99%E6%88%91%E4%B8%80%E9%A1%B5%E5%8F%AF%E4%BB%A5%E5%AD%98%E4%B8%8B%E6%9D%A5%E7%9A%84%E7%99%BD%E8%AF%9D%E5%AF%B9%E7%85%A7%E8%A1%A8%E3%80%82&amp;surface=cowork&amp;composer=mini">把这几个词讲透</a>
+    <a class="btn" href="https://claude.ai/new?q=%E8%AF%B7%E4%BD%A0%E6%89%AE%E6%BC%94%E4%B9%B0%E6%96%B9%E9%9D%A2%E8%AF%95%E5%AE%98%EF%BC%8C%E5%92%8C%E6%88%91%E5%81%9A%E4%B8%80%E5%9C%BA%E6%A8%A1%E6%8B%9F%E9%9D%A2%E8%AF%95%E3%80%82%E9%A2%98%E7%9B%AE%E5%9B%B4%E7%BB%95%E4%BC%AF%E5%85%8B%E5%B8%8C%E5%B0%94%C2%B7%E5%93%88%E6%92%92%E9%9F%A6%202026%20%E5%B9%B4%E7%AC%AC%E4%B8%89%E5%AD%A3%E5%BA%A6%E8%B4%A2%E6%8A%A5%EF%BC%9A%E5%87%80%E5%88%A9%E6%B6%A6%E7%BA%A6%20221%20%E4%BA%BF%E7%BE%8E%E5%85%83%E3%80%81%E5%90%8C%E6%AF%94%E4%B8%8B%E9%99%8D%2028%25%EF%BC%8C%E7%BB%8F%E8%90%A5%E5%88%A9%E6%B6%A6%E7%BA%A6%20127%20%E4%BA%BF%E7%BE%8E%E5%85%83%E3%80%81%E5%90%8C%E6%AF%94%E4%B8%8B%E9%99%8D%E7%BA%A6%206%25%EF%BC%8C%E4%BF%9D%E9%99%A9%E6%89%BF%E4%BF%9D%E5%88%A9%E6%B6%A6%E7%BA%A6%2013.5%20%E4%BA%BF%E7%BE%8E%E5%85%83%EF%BC%88%E5%8E%BB%E5%B9%B4%E5%90%8C%E6%9C%9F%E7%BA%A6%2023.7%20%E4%BA%BF%EF%BC%89%EF%BC%8C%E4%B8%89%E5%AD%A3%E5%BA%A6%E5%9B%9E%E8%B4%AD%E7%BA%A6%2096%20%E4%BA%BF%E7%BE%8E%E5%85%83%EF%BC%8C9%20%E6%9C%88%E5%BA%95%E6%8C%81%E6%9C%89%E8%82%A1%E7%A5%A8%E7%BA%A6%203%2C355%20%E4%BA%BF%E7%BE%8E%E5%85%83%E3%80%82%E4%BD%A0%E5%8F%AF%E4%BB%A5%E4%B8%8A%E7%BD%91%E6%A0%B8%E5%AF%B9%E8%BF%99%E4%BA%9B%E5%85%AC%E5%BC%80%E6%95%B0%E5%AD%97%E3%80%82%E8%AF%B7%E5%B0%B1%E2%80%9C%E5%87%80%E5%88%A9%E6%B6%A6%E5%92%8C%E7%BB%8F%E8%90%A5%E5%88%A9%E6%B6%A6%E4%B8%BA%E4%BB%80%E4%B9%88%E5%B7%AE%E8%BF%99%E4%B9%88%E5%A4%9A%E2%80%9D%E2%80%9C%E5%93%AA%E4%BA%9B%E8%B5%84%E4%BA%A7%E7%9A%84%E6%B6%A8%E8%B7%8C%E4%BC%9A%E8%BF%9B%E5%88%A9%E6%B6%A6%E8%A1%A8%E2%80%9D%E2%80%9C%E5%A6%82%E6%9E%9C%E8%82%A1%E5%B8%82%E5%86%8D%E8%B7%8C%2010%25%20%E6%8A%A5%E8%A1%A8%E4%BC%9A%E6%80%8E%E6%A0%B7%E2%80%9D%E8%BF%9E%E7%BB%AD%E8%BF%BD%E9%97%AE%E6%88%91%EF%BC%8C%E6%AF%8F%E6%AC%A1%E5%8F%AA%E9%97%AE%E4%B8%80%E4%B8%AA%E9%97%AE%E9%A2%98%EF%BC%8C%E7%AD%89%E6%88%91%E7%AD%94%E5%AE%8C%E5%86%8D%E8%BF%BD%E9%97%AE%E3%80%82%E7%BB%93%E6%9D%9F%E5%90%8E%E7%BB%99%E6%88%91%E4%B8%80%E4%BB%BD%E4%B9%A6%E9%9D%A2%E7%82%B9%E8%AF%84%EF%BC%9A%E5%93%AA%E9%87%8C%E7%AD%94%E5%BE%97%E5%A5%BD%E3%80%81%E5%93%AA%E9%87%8C%E9%9C%B2%E6%80%AF%E3%80%81%E6%A0%87%E5%87%86%E7%AD%94%E6%B3%95%E6%98%AF%E4%BB%80%E4%B9%88%E3%80%82&amp;surface=cowork&amp;composer=mini">拿这份财报练面试</a>
+
+  </div>
+</div>
+
+</body>
+</html>
