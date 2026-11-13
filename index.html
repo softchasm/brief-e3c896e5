@@ -2,97 +2,335 @@
 <html lang="zh-CN">
 <head>
 <meta charset="utf-8">
+<meta name="brief-edition" content="2026-11-13">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex,nofollow,noarchive">
-<title>晨间简报 · 归档</title>
+<title>晨间简报 · 2026年11月13日</title>
 <style>
   :root{
-    --bg:#FCFCFB; --wash:#F9F9F7; --ink:#2E2C27; --ink-soft:#6B6A63;
-    --ink-grey:#B4B3A8; --hairline:#E4E3DC; --edge:#E1E1DF; --clay:#C6613F;
+    --bg:#FCFCFB;
+    --wash:#F9F9F7;
+    --ink:#2E2C27;
+    --ink-soft:#6B6A63;
+    --ink-grey:#B4B3A8;
+    --hairline:#E4E3DC;
+    --edge:#E1E1DF;
+    --clay:#C6613F;
+    --clay-hover:#AE5133;
     --sans:-apple-system,"Segoe UI",sans-serif;
+    --mono:"SF Mono",Menlo,Consolas,monospace;
     --serif:"Songti SC","Source Han Serif SC","Noto Serif CJK SC",STSong,Georgia,serif;
   }
   *{box-sizing:border-box}
   html,body{margin:0;padding:0}
-  body{background:var(--bg);color:var(--ink);font-family:var(--sans);-webkit-font-smoothing:antialiased}
+  body{background:var(--bg);color:var(--ink);font-family:var(--sans);
+       -webkit-font-smoothing:antialiased;font-style:normal}
+  .band{width:100%}
   .band--top{background:var(--wash);border-bottom:1px solid var(--edge)}
+  .band--bottom{background:var(--bg)}
   .inner{max-width:860px;margin:0 auto;padding:54px 32px 44px}
-  .band--bottom .inner{padding:44px 32px 72px}
-  .kicker{font-size:12.5px;letter-spacing:.06em;color:var(--ink-soft);margin:0 0 14px}
-  h1{font-family:var(--serif);font-weight:600;font-size:36px;line-height:1.3;margin:0;text-wrap:balance}
-  ul{list-style:none;margin:0;padding:0}
-  li{border-bottom:1px solid var(--hairline)}
-  li a{display:flex;gap:20px;align-items:baseline;padding:16px 0;text-decoration:none;color:var(--ink)}
-  li a:hover .t{text-decoration:underline;text-decoration-color:var(--ink-grey);text-underline-offset:3px}
-  .d{flex:0 0 118px;font-size:12.5px;color:var(--ink-grey);font-variant-numeric:tabular-nums}
-  .t{font-size:15px;font-weight:600;line-height:1.55}
-  .files{padding:0 0 15px 138px;margin-top:-6px}
-  .files a{font-size:12.5px;color:var(--clay);text-decoration:none;margin-right:16px}
-  .files a:hover{text-decoration:underline;text-underline-offset:3px}
-  .empty{font-size:14px;line-height:1.75;color:var(--ink-soft);margin:0}
+  .band--bottom .inner{padding:48px 32px 72px}
+
+  .daydate{font-size:12.5px;letter-spacing:.06em;color:var(--ink-soft);margin:0 0 14px}
+  h1{font-family:var(--serif);font-weight:600;font-size:40px;line-height:1.3;
+     margin:0 0 34px;letter-spacing:-.005em;text-wrap:balance}
+
+  .drawing{display:block;width:100%;height:auto;margin:0 0 6px}
+
+  .acts{display:flex;margin-top:22px}
+  .act{flex:1 1 0;padding:0 26px}
+  .act:first-child{padding-left:0}
+  .act:last-child{padding-right:0}
+  .act + .act{border-left:1px solid var(--hairline)}
+  .act__time{font-size:12.5px;font-weight:700;letter-spacing:.02em;margin:0 0 7px}
+  .act__line{font-size:13.5px;line-height:1.62;color:var(--ink-soft);margin:0}
+
+  h2{font-size:12.5px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;
+     color:var(--ink);margin:46px 0 20px}
+  h2:first-of-type{margin-top:0}
+  h2 .h2note{text-transform:none;letter-spacing:0;font-weight:400;color:var(--ink-grey)}
+
+  ol,ul{list-style:none;margin:0;padding:0}
+  .item{display:flex;gap:16px;padding:0 0 26px}
+  .item__num{flex:0 0 18px;font-size:12.5px;color:var(--ink-grey);
+             line-height:1.75;font-variant-numeric:tabular-nums}
+  .item__body{flex:1 1 auto;min-width:0}
+  .item__title{font-size:15px;font-weight:700;line-height:1.55;margin:0 0 5px}
+
+  .en{font-size:14px;line-height:1.68;color:var(--ink);margin:0 0 9px}
+  .en b{font-weight:700}
+  .zh{font-size:13.5px;line-height:1.7;color:var(--ink-soft);margin:0;
+      padding-left:13px;border-left:1px solid var(--hairline)}
+  .zh b{color:var(--ink);font-weight:600}
+
+  .gloss{font-size:12.5px;color:var(--ink-soft);font-weight:400}
+
+  .prose{font-size:14px;line-height:1.75;color:var(--ink-soft);margin:0 0 14px}
+  .prose b{color:var(--ink);font-weight:600}
+  .prose--lead{margin-bottom:18px}
+
+  .sub{font-size:13px;font-weight:700;color:var(--ink);margin:20px 0 8px;letter-spacing:.01em}
+
+  .step{display:flex;gap:13px;padding:0 0 13px;font-size:13.5px;line-height:1.72;color:var(--ink-soft)}
+  .step__n{flex:0 0 17px;color:var(--clay);font-weight:700;font-variant-numeric:tabular-nums}
+  .step__b{flex:1 1 auto;min-width:0}
+  .step__b b{color:var(--ink);font-weight:600}
+  .formula{font-family:var(--mono);font-size:12.5px;background:var(--wash);
+           border:1px solid var(--hairline);border-radius:3px;padding:1.5px 5px;
+           color:var(--ink);white-space:nowrap}
+
+  .tablewrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:12px 0 4px}
+  table.grid{border-collapse:collapse;width:100%;min-width:400px;
+             font-size:12.5px;color:var(--ink-soft);font-variant-numeric:tabular-nums}
+  table.grid th{text-align:left;font-weight:600;color:var(--ink);
+                border-bottom:1px solid var(--hairline);padding:6px 10px 6px 0}
+  table.grid td{border-bottom:1px solid var(--hairline);padding:6px 10px 6px 0}
+  table.grid th:nth-child(n+3),table.grid td:nth-child(n+3){text-align:right;padding-right:0}
+
+  .btn{display:inline-block;margin:12px 6px 0 0;background:var(--clay);border:1px solid var(--clay);
+       border-radius:8px;padding:9px 16px;font-family:var(--sans);font-weight:500;font-size:13px;
+       color:#FCFCFB;text-decoration:none;line-height:1.2}
+  .btn:hover{background:var(--clay-hover);border-color:var(--clay-hover)}
+
   @media (max-width:640px){
-    .inner{padding:38px 20px 30px}
-    .band--bottom .inner{padding:30px 20px 52px}
-    h1{font-size:28px}
-    li a{display:block;padding:14px 0}
-    .d{margin-bottom:4px}
+    .inner{padding:38px 20px 32px}
+    .band--bottom .inner{padding:34px 20px 52px}
+    h1{font-size:30px;margin-bottom:26px}
+    .acts{display:block}
+    .act{padding:0}
+    .act + .act{border-left:0;border-top:1px solid var(--hairline);margin-top:18px;padding-top:18px}
+    .formula{white-space:normal}
+  }
+
+  @media print{
+    .item,.act,.drawing,.tablewrap,.step,h2,h3{break-inside:avoid;page-break-inside:avoid}
+    h2,h3{break-after:avoid;page-break-after:avoid}
+    .btn{display:none}
   }
 </style>
 <script src="live.js?v=3" defer></script>
 </head>
 <body>
-<section class="band--top">
+
+<div class="band band--top">
   <div class="inner">
-    <p class="kicker">工作日每天早晨 · 自动生成 · 开着页面也会自动更新</p>
-    <h1>晨间简报归档</h1>
-    <p class="kicker" style="margin:14px 0 0"><a href="latest.html" style="color:var(--clay);text-decoration:none">打开最新一期 →</a>　开着它，出了新的一期会自动切过去</p>
+    <!-- brief-nav --><style>@media print{.brief-nav{display:none!important}}</style><p class="brief-nav" style="float:right;margin:0 0 0 16px;font-size:12.5px;line-height:1.5;color:#B4B3A8"><a href="archive.html" style="color:#6B6A63;text-decoration:underline;text-decoration-color:#E4E3DC;text-underline-offset:3px">往期目录</a> · <a href="2026-11-13%20%E6%99%A8%E9%97%B4%E7%AE%80%E6%8A%A5.pdf" style="color:#6B6A63;text-decoration:underline;text-decoration-color:#E4E3DC;text-underline-offset:3px">PDF</a> · <a href="2026-11-13%20%E4%B8%8A%E6%89%8B%E7%BB%83.xlsx" style="color:#6B6A63;text-decoration:underline;text-decoration-color:#E4E3DC;text-underline-offset:3px">练习表</a></p><!-- /brief-nav -->
+    <p class="daydate">2026年11月13日 · 星期五</p>
+    <h1>Carl，今天只讲一件事：思科每件货赚得少了，整家公司却赚得更多了。</h1>
+
+    <svg class="drawing" viewBox="0 0 840 180" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path d="M 0,134 C 20,132 40,130 60,130 C 120,130 160,73 215,73
+               C 270,73 315,82.5 370,82.5 C 425,82.5 470,50 525,50
+               C 580,50 625,59 680,59 C 720,59 750,59 790,59 L 840,59"
+            fill="none" stroke="#2E2C27" stroke-width="1.6" stroke-linecap="round"/>
+      <circle cx="60"  cy="130"  r="6"  fill="#B4B3A8"/>
+      <circle cx="215" cy="73"   r="11" fill="#2E2C27"/>
+      <circle cx="370" cy="82.5" r="7"  fill="#2E2C27"/>
+      <circle cx="525" cy="50"   r="9"  fill="#2E2C27"/>
+      <circle cx="680" cy="59"   r="7"  fill="#2E2C27"/>
+      <circle cx="790" cy="59"   r="7.5" fill="#F9F9F7" stroke="#C6613F" stroke-width="1.8"/>
+      <text x="60"  y="166" text-anchor="middle" font-family="-apple-system,sans-serif" font-size="11" fill="#B4B3A8">11/6 周五 7,377</text>
+      <text x="215" y="166" text-anchor="middle" font-family="-apple-system,sans-serif" font-size="11" fill="#B4B3A8">11/9 周一 +2.3%</text>
+      <text x="370" y="166" text-anchor="middle" font-family="-apple-system,sans-serif" font-size="11" fill="#B4B3A8">11/10 周二 −0.4%</text>
+      <text x="525" y="166" text-anchor="middle" font-family="-apple-system,sans-serif" font-size="11" fill="#B4B3A8">11/11 周三 +1.3%</text>
+      <text x="680" y="166" text-anchor="middle" font-family="-apple-system,sans-serif" font-size="11" fill="#B4B3A8">11/12 周四 7,592</text>
+      <text x="790" y="166" text-anchor="middle" font-family="-apple-system,sans-serif" font-size="11" fill="#C6613F">今晚 PPI</text>
+    </svg>
+
+    <div class="acts">
+      <div class="act">
+        <p class="act__time">7:30 — 7:36 AM</p>
+        <p class="act__line">上面那条线是标普 500 这一周的收盘。五条资讯里第一条是主线：思科的毛利率掉了 2.5 个点，营业利润率却创了纪录。</p>
+      </div>
+      <div class="act">
+        <p class="act__time">7:36 — 7:46 AM</p>
+        <p class="act__line">打开配套的 xlsx，用一张八行的利润表亲手算出"为什么两个率可以一个跌、一个涨"。</p>
+      </div>
+      <div class="act">
+        <p class="act__time">7:46 — 7:50 AM</p>
+        <p class="act__line">同一笔成本，审计关心它记在哪一行，买方关心它会不会跟着收入涨；再用这把尺子量思科。周五末尾多一节招聘时间窗。</p>
+      </div>
+    </div>
   </div>
-</section>
-<section class="band--bottom">
+</div>
+
+<div class="band band--bottom">
   <div class="inner">
-    <ul>
-      <li>
-        <a href="2026-11-13.html">
-          <span class="d">11月13日 周五</span>
-          <span class="t">毛利率跌了，利润率却创了纪录</span>
-        </a>
-        <div class="files">
-          <a href="2026-11-13%20%E6%99%A8%E9%97%B4%E7%AE%80%E6%8A%A5.pdf">PDF ↓</a>
-          <a href="2026-11-13%20%E4%B8%8A%E6%89%8B%E7%BB%83.xlsx">上手练 xlsx ↓</a>
+
+    <h2>今日商业资讯 <span class="h2note">· 英文在上，中文在下</span></h2>
+    <ol>
+      <li class="item">
+        <div class="item__num">01</div>
+        <div class="item__body">
+          <p class="item__title">这是今天的主线：毛利率跌了，利润率却创了纪录</p>
+          <p class="en">Cisco posted record quarterly revenue of <b>$18.5 billion</b>, up 24% from a year ago <span class="gloss">（白话：同比——和去年同一个季度比）</span>, and raised its full-year revenue guidance <span class="gloss">（白话：业绩指引——公司自己对外预告"我们今年大概能做多少"）</span> to $74.8–75.8 billion. The odd part sits one layer down: gross margin <span class="gloss">（白话：毛利率——每卖 100 元，扣掉做出这件货直接花的钱，还剩多少元）</span> fell to <b>65.6%</b> from 68.1% as memory chips got pricier, yet operating margin <span class="gloss">（白话：营业利润率——每卖 100 元，再扣掉研发、销售、管理这些日常开销之后，主业最终剩多少元）</span> hit a record <b>37.8%</b>. Roughly half of every additional revenue dollar fell through to operating income.</p>
+          <p class="zh">思科单季收入 185 亿美元，创纪录，同比增长 24%，并把全年收入指引上调到 748~758 亿。奇怪的地方在下一层：毛利率从 68.1% 掉到 <b>65.6%</b>（内存芯片涨价），营业利润率却升到创纪录的 <b>37.8%</b>。按公司披露的数字推算，新增的每 1 美元收入里，约 52% 变成了营业利润。<b>这一天改变的看法是：思科被当成一家"收入涨、费用不怎么涨"的公司来定价——但毛利率那条往下的线，是这个故事里会咬人的地方。</b></p>
         </div>
       </li>
-      <li>
-        <a href="2026-11-12.html">
-          <span class="d">11月12日 周四</span>
-          <span class="t">订单簿上的 1,325 亿美元，离到手的钱还有多远</span>
-        </a>
-        <div class="files">
-          <a href="2026-11-12%20%E6%99%A8%E9%97%B4%E7%AE%80%E6%8A%A5.pdf">PDF ↓</a>
-          <a href="2026-11-12%20%E4%B8%8A%E6%89%8B%E7%BB%83.xlsx">上手练 xlsx ↓</a>
+      <li class="item">
+        <div class="item__num">02</div>
+        <div class="item__body">
+          <p class="item__title">周四：英伟达换帅，三大指数小幅收低</p>
+          <p class="en">Stocks slipped on Thursday. The S&amp;P 500 fell <b>0.35%</b> to 7,592.40, the Dow lost <b>0.36%</b> to 52,297.09, and the Nasdaq shed <b>0.39%</b> to 25,366.09. Nvidia dropped <b>4.3%</b> to $166.19 after a regulatory filing <span class="gloss">（白话：上市公司出了大事必须向监管机构提交的公告，美国叫 8-K）</span> said the board had accepted Jensen Huang's resignation as CEO and director, effective immediately. CFO Colette Kress steps in as interim CEO; the company reports earnings on November 17.</p>
+          <p class="zh">周四美股小跌：标普 500 跌 0.35% 收 7,592.40，道指跌 0.36% 收 52,297.09，纳斯达克跌 0.39% 收 25,366.09。英伟达跌约 4.3% 收 166.19 美元——公司公告称董事会已接受黄仁勋辞去 CEO 和董事职务，立即生效，公告本身没有说明原因；财务总监 Colette Kress 出任临时 CEO，公司 11 月 17 日发财报。<b>这条改变的是"人"在估值里的分量：</b>创始人一走，市场给同样的利润打的折扣就变大了。指数盘中一度跌近 1%，收盘只跌 0.35%，说明市场把它当成一家公司的事，而不是整个 AI 行业的事。</p>
         </div>
       </li>
-      <li>
-        <a href="2026-11-11.html">
-          <span class="d">11月11日 周三</span>
-          <span class="t">利率一涨，越远的钱越不值钱</span>
-        </a>
-        <div class="files">
-          <a href="2026-11-11%20%E6%99%A8%E9%97%B4%E7%AE%80%E6%8A%A5.pdf">PDF ↓</a>
-          <a href="2026-11-11%20%E4%B8%8A%E6%89%8B%E7%BB%83.xlsx">上手练 xlsx ↓</a>
+      <li class="item">
+        <div class="item__num">03</div>
+        <div class="item__body">
+          <p class="item__title">应用材料：造芯片的机器，也卖出了纪录</p>
+          <p class="en">Applied Materials reported record quarterly revenue of <b>$10.41 billion</b>, up 53% from a year ago, and guided next quarter to about <b>$11.1 billion</b>, give or take $500 million. Management credited AI-driven demand for chipmaking equipment.</p>
+          <p class="zh">应用材料（卖"造芯片的机器"的公司）单季收入 104.1 亿美元，创纪录，同比增长 53%；下季度收入指引约 111 亿，上下浮动 5 亿。<b>它和思科是同一条链上的两个卖方：</b>云厂商的资本开支<span class="gloss">（白话：capex——公司为了买长期要用的东西，比如机房、服务器，花出去的钱）</span>花出去，一部分变成思科的网络设备订单，另一部分经过芯片厂变成应用材料的机器订单。两家同一晚都报出纪录，说明这笔钱还在往下游流。</p>
         </div>
       </li>
-      <li>
-        <a href="2026-11-10.html">
-          <span class="d">11月10日 周二</span>
-          <span class="t">电费和选票，正在变成财报上的数字</span>
-        </a>
-        <div class="files">
-          <a href="2026-11-10%20%E6%99%A8%E9%97%B4%E7%AE%80%E6%8A%A5.pdf">PDF ↓</a>
-          <a href="2026-11-10%20%E4%B8%8A%E6%89%8B%E7%BB%83.xlsx">上手练 xlsx ↓</a>
+      <li class="item">
+        <div class="item__num">04</div>
+        <div class="item__body">
+          <p class="item__title">Nebius：收入涨了五倍多，股价却大跌</p>
+          <p class="en">Nebius, an AI cloud provider, beat revenue estimates with <b>$980.8 million</b>, up 571%, and still sold off sharply, by a mid-teens percentage at the lows. The reason: it lifted this year's capex plan to about <b>$27 billion</b> and pencilled in <b>$40–45 billion</b> for 2027, while steering full-year revenue to the low end of its range.</p>
+          <p class="zh">AI 云服务商 Nebius 单季收入 9.808 亿美元，同比增长 571%，超出预期，股价盘中却一度跌了一成半左右。原因是它把今年的资本开支计划提高到约 270 亿美元，2027 年预计要花 400~450 亿，同时说全年收入会落在指引区间的下沿。<b>把它和第 01 条放在一起看：</b>同样是 AI 带来的增长，思科的增长不需要自己先垫大钱（垫钱的是它的客户），Nebius 的增长每一块钱都要自己先花几块钱去建。市场给这两种增长的价格完全不同。</p>
         </div>
       </li>
-    </ul>
+      <li class="item">
+        <div class="item__num">05</div>
+        <div class="item__body">
+          <p class="item__title">今晚：PPI，看成本压力有没有继续往下传</p>
+          <p class="en">October PPI <span class="gloss">（白话：生产者价格指数——工厂和批发商卖货的价格比之前涨了多少，可以理解成"企业进货的物价"）</span> is due at 8:30 a.m. Eastern on Friday, three days after a hotter-than-expected CPI. Markets are leaning toward another Fed rate hike at the December 9–10 meeting, and three Fed officials are scheduled to speak.</p>
+          <p class="zh">10 月 PPI 今晚北京时间 21:30 公布，三天前的 CPI<span class="gloss">（白话：居民消费价格指数——老百姓买同一篮子东西比之前贵了多少）</span>刚刚高于预期。市场倾向于认为美联储 12 月 9~10 日的会议还会再加息，今天另有三位美联储官员讲话。<b>它和主线的关系：</b>思科毛利率下滑的原因就是进货变贵（内存涨价）。PPI 量的正是"企业进货贵了多少"——这个数字高，意味着更多公司会出现思科这种"收入在涨、毛利率在跌"的形状。</p>
+        </div>
+      </li>
+    </ol>
+
+    <h2>上手练 · 十分钟 <span class="h2note">· 场景来自第 01 条</span></h2>
+    <p class="prose prose--lead">配套文件 <b>「2026-11-13 上手练.xlsx」</b> 和这份 PDF 在同一个文件夹里，打开它，跟着下面一步一步按。<b>每一步都写了点哪个格、输入什么</b>，不需要你事先会任何函数。</p>
+
+    <p class="prose">背景：一家<b>虚构的</b>网络设备公司，卖硬件（交换机之类的机器），也卖软件和维保服务。下面是它去年同一个季度和这个季度的八行数字，单位是百万美元。你要回答：<b>它的毛利率是涨是跌？营业利润率呢？为什么这两个可以方向相反？</b></p>
+
+    <div class="tablewrap">
+      <table class="grid">
+        <thead>
+          <tr><th>行</th><th>A 项目</th><th>B 去年同季</th><th>C 本季</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>2</td><td>硬件收入</td><td>9,000</td><td>12,400</td></tr>
+          <tr><td>3</td><td>软件与服务收入</td><td>6,000</td><td>6,200</td></tr>
+          <tr><td>4</td><td>硬件成本</td><td>3,150</td><td>4,960</td></tr>
+          <tr><td>5</td><td>软件与服务成本</td><td>1,500</td><td>1,550</td></tr>
+          <tr><td>6</td><td>研发费用</td><td>2,300</td><td>2,400</td></tr>
+          <tr><td>7</td><td>销售费用</td><td>2,700</td><td>2,800</td></tr>
+          <tr><td>8</td><td>管理费用</td><td>750</td><td>780</td></tr>
+          <tr><td>9</td><td>其他费用</td><td>300</td><td>310</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p class="sub">第一步 · 每一行变了多少</p>
+    <div class="step"><div class="step__n">①</div><div class="step__b">点一下 <b>D2</b>，输入 <span class="formula">=C2-B2</span>，按回车。这是减法：本季 − 去年同季。D2 应该出现 <b>3400</b>。</div></div>
+    <div class="step"><div class="step__n">②</div><div class="step__b">再点一下 D2 选中它，把鼠标移到这个格<b>右下角的小方块</b>上，光标变成<b>细实心十字</b>时<b>双击</b>。公式会自动填满 D3 到 D9。先扫一眼这一列：两行收入一共多了多少，四行费用一共才多了多少。</div></div>
+
+    <p class="sub">第二步 · 算出三个小计</p>
+    <div class="step"><div class="step__n">③</div><div class="step__b">点 <b>B11</b>，输入 <span class="formula">=B2+B3</span>，回车。这是收入合计。</div></div>
+    <div class="step"><div class="step__n">④</div><div class="step__b">点 <b>B12</b>，输入 <span class="formula">=B11-B4-B5</span>，回车。收入减掉两行成本，就是<b>毛利</b>。</div></div>
+    <div class="step"><div class="step__n">⑤</div><div class="step__b">点 <b>B13</b>，输入 <span class="formula">=B12-SUM(B6:B9)</span>，回车。<span class="formula">SUM</span> 就是"把这一串格子加起来"，<span class="formula">B6:B9</span> 表示从 B6 一直到 B9，也就是四行费用。毛利减掉四行费用，就是<b>营业利润</b>。</div></div>
+    <div class="step"><div class="step__n">⑥</div><div class="step__b">点 B11，按住鼠标往下拖到 B13，把这三格一起选中。鼠标移到 B13 右下角的小方块上，变成细十字后<b>按住往右拖到 D 列</b>再松手。C 列和 D 列的三个小计就都有了（D 列是小计的变化额）。</div></div>
+
+    <p class="sub">第三步 · 算出三个率</p>
+    <div class="step"><div class="step__n">⑦</div><div class="step__b">点 <b>B15</b>，输入 <span class="formula">=B12/B11</span>，回车，这是毛利率。点 <b>B16</b>，输入 <span class="formula">=B13/B11</span>，回车，这是营业利润率。然后像第 ⑥ 步那样选中 B15 和 B16，<b>往右拖到 C 列</b>。</div></div>
+    <div class="step"><div class="step__n">⑧</div><div class="step__b">点 <b>D17</b>，输入 <span class="formula">=D13/D11</span>，回车。这是"多出来的营业利润 ÷ 多出来的收入"。</div></div>
+    <div class="step"><div class="step__n">⑨</div><div class="step__b">这几个格现在显示的是 0.69 这样的小数。选中它们，点上方「开始」选项卡里的 <span class="formula">%</span> 按钮，就变成百分比了；想多看一位小数，点旁边那个带 <span class="formula">.0</span> 和箭头的按钮。</div></div>
+
+    <p class="sub">做完再看这三个考点</p>
+    <p class="prose">
+      <b>考点一：两个率方向相反。</b>毛利率从 <b>69.0%</b> 掉到 <b>65.0%</b>，跌了 4 个百分点；营业利润率却从 <b>28.7%</b> 升到 <b>31.2%</b>，涨了 2.5 个百分点。营业利润本身从 <b>4,300</b> 涨到 <b>5,800</b>。和思科的形状一样。<br><br>
+      <b>考点二：原因在 D 列。</b>收入多了 <b>3,600</b>，涨了 24%；四行费用加起来只多了 <b>240</b>，涨了不到 4%。研发的人、销售的人、办公楼，不会因为多卖了货就按比例变多。所以毛利虽然只多了 <b>1,740</b>，其中 <b>1,500</b> 都留了下来。D17 是 <b>41.7%</b>——新增的每 100 元收入里，有 41.7 元变成了营业利润，比原来 28.7% 的平均水平高得多。这个数叫<b>增量利润率</b>，这个现象叫<b>经营杠杆</b><span class="gloss">（白话：费用大体是固定的，所以收入多涨一点，利润会多涨很多；像一家房租固定的餐馆，多来一桌客人，那桌的钱大部分是净赚）</span>。<br><br>
+      <b>考点三：毛利率为什么跌，要拆成两半。</b>硬件的毛利率是 65%→<b>60%</b>（成本涨了），软件与服务一直是 75%。同时硬件占收入的比重从 60% 升到了 <b>66.7%</b>。如果硬件毛利率没跌、只是卖得更多，整体毛利率会是 <b>68.3%</b>——也就是说 4 个点的跌幅里，只有约 <b>0.7</b> 个点来自"低毛利的东西卖得多了"，约 <b>3.3</b> 个点来自"同样的东西成本变贵了"。前一种是好事的副作用，后一种才是真问题。面试里被问"毛利率为什么跌"，先把这两半分开，就已经赢了一半的人。
+    </p>
+
+    <h2>会计 → 估值桥梁 <span class="h2note">· 科目：营业成本与期间费用</span></h2>
+    <p class="prose prose--lead">你刚才用到了两条减法线：先减"成本"得到毛利，再减"费用"得到营业利润。<b>一笔钱被放在第一条线之上还是之下，决定了今天整期讲的这两个率。</b></p>
+
+    <p class="sub">先讲这两个科目是什么</p>
+    <p class="prose"><b>营业成本</b>是"做出并交付这件货直接花掉的钱"：零件、组装、运费。卖出一件，才记一件的成本；没卖出去的货，成本先停在仓库里，叫<b>存货</b><span class="gloss">（白话：已经花钱做出来或买进来、但还没卖掉的货。它算公司的财产，不算这一期的成本）</span>。<b>期间费用</b>是"不管这个季度卖出多少，都得花的钱"：研发人员的工资、销售团队、总部办公楼。这些钱不跟着某一件货走，花在哪个季度就记在哪个季度。</p>
+
+    <p class="sub">在审计底稿里，它是什么</p>
+    <p class="prose">两个<b>要核对"归类"和"归期"的数字</b>。归类：该进成本的有没有被放进费用（放错了，毛利率会虚高）。归期：年底前发出去的货，成本是不是和收入记在了同一期；仓库里的零件涨价了，账上的单价算得对不对。关心的是：<b>每一笔钱是不是记在了正确的行和正确的季度？</b></p>
+
+    <p class="sub">在买方的模型里，同一组数字是什么</p>
+    <p class="prose">买方不按"成本／费用"分，而是按<b>"会不会跟着收入一起涨"</b>重新分一遍。会跟着涨的叫变动成本，不太跟着涨的叫固定成本。然后只问一件事：<b>收入每多 100 元，利润多几元？</b>这就是你算的 D17。但买方还会把同一个算式反过来用：<b>收入要是少 100 元，利润也会少掉 41.7 元，而不是 28.7 元。</b>经营杠杆在上坡时是礼物，在下坡时是同样大小的债。审计保证的是这一期的数字记对了，买方赌的是下一期的数字往哪个方向走、走多快。</p>
+    <p class="prose">你的独家优势在这里：模型里"哪些成本算固定"是分析师猜的，而你在底稿里见过成本是怎么一笔一笔归类的——比如发给员工的股票，有多少进了成本、多少进了研发费用。这类归类一变，毛利率就会变，生意本身却一点没变。</p>
+
+    <p class="sub">可以带去面试的问题</p>
+    <p class="prose">"<b>贵公司这个季度毛利率的变化里，有多少来自产品组合的变化，有多少来自同一产品的成本变化？如果收入增速回落到个位数，现在的费用里有多少是能跟着降下来的？</b>" 前半句问的是考点三，后半句问的是经营杠杆的反面。能问出后半句的人，说明没有只看到上坡。</p>
+
+    <h2>公司拆解 · 思科（Cisco）</h2>
+    <p class="prose prose--lead">用上手练的三个率，量它周四盘后公布的真实数字。</p>
+
+    <p class="sub">商业模式，一句话</p>
+    <p class="prose">把交换机、路由器这类"让机器之间能互相传数据"的设备卖给企业和云厂商，再在上面卖按年续费的软件、安全产品和维保服务。<b>别人的资本开支，就是它的收入</b>——云厂商每建一座 AI 机房，除了买芯片，还得买把成千上万块芯片连起来的网络设备。</p>
+
+    <p class="sub">三个 driver</p>
+    <p class="prose">
+      <b>一、超大型云厂商的 AI 订单。</b>公司预计本财年来自这类客户<span class="gloss">（白话：hyperscaler，指自己建巨型机房的那几家云计算和互联网公司）</span>的 AI 基础设施收入约 <b>90 亿美元</b>，90 天前的说法还是 75 亿；占全年收入的比重约 12%，上一财年约 6%。产品订单同比增长 21%，剔除这几家大客户后增长 14%。<br>
+      <b>二、产品组合和零件成本。</b>产品毛利率掉了 350 个基点<span class="gloss">（白话：1 个基点是 0.01 个百分点，350 个基点就是 3.5 个百分点）</span>，到 63.7%。两个原因和你表里的一样：硬件卖得更多（组合变化，英文叫 mix），内存涨价（成本变化）。公司预计全年毛利率略低于 65%。<br>
+      <b>三、费用纪律。</b>收入涨 24%，营业利润涨 37%，约 70 亿美元。这个数和上面的两个率都是"调整后"口径<span class="gloss">（白话：英文叫 non-GAAP，公司自己调整过的算法，会剔掉一些它认为"不代表日常经营"的项目，比如发给员工的股票。和审计过的正式口径不是同一个数）</span>。费用涨得比收入慢，这就是经营杠杆。
+    </p>
+
+    <p class="sub">三个要看的数</p>
+    <p class="prose">
+      <b>增量利润率</b>：这个季度约 52%。它高于 37.8% 的平均水平，平均水平才会继续往上走；哪个季度它掉到平均水平以下，利润率就见顶了。<br>
+      <b>毛利率</b>：下季度指引 65%~66%。内存价格再涨、或者低毛利的 AI 硬件占比再升，这条线还会往下。它跌得比费用省得快的那一天，故事就反过来了。<br>
+      <b>AI 收入的集中度</b>：12% 的收入来自少数几家云厂商。这几家的 capex 计划一变，思科没有缓冲。看 AI 业务的单位经济<span class="gloss">（白话：unit economics，把生意缩小到"一个单位"来算账——这里是每卖一台 AI 网络设备：卖多少钱、零件多少钱、剩多少）</span>：卖给大客户的设备量大但议价狠，每台赚的比卖给普通企业的少。
+    </p>
+
+    <h2>一句英文商业表达</h2>
+    <p class="prose prose--lead">从今天第 01 条里挑的：</p>
+    <p class="en" style="font-size:15px;font-weight:700;margin-bottom:12px">"Roughly half of every additional revenue dollar fell through to operating income."</p>
+    <p class="prose"><b>fall through to</b>（也说 flow through to、drop to）描述的是：一笔新增的收入，穿过利润表上一层一层的成本和费用，最后有多少"掉"到了下面的利润那一行。想象一个漏斗，上面倒进去 1 美元，下面接到 50 美分。</p>
+    <p class="prose"><b>什么时候用：</b>解释利润为什么涨得比收入快（或慢）。FP&amp;A 做季度复盘、投行写财报点评、面试里被问"这家公司有没有经营杠杆"，都是它的场合。</p>
+    <p class="prose"><b>为什么比直白说法好：</b>说 "profit grew faster than revenue" 只给了结论。fell through 同时交代了机制——费用没怎么动，所以新增收入大部分留了下来——而且自带一个可以追问的数字：fall-through 是多少？</p>
+    <p class="prose"><b>两个替代说法对照：</b><br>
+      · "<b>incremental margins were around 50%</b>" —— 同一件事的名词说法，更书面，适合写进模型备注和报告。<br>
+      · "<b>operating leverage kicked in</b>" —— 更口语，只说现象不给数字；适合在会上一句话带过，但对方多半会接着问 "how much?"。
+    </p>
+
+    <h2>招聘情报与时间窗 <span class="h2note">· 仅周五</span></h2>
+    <ol>
+      <li class="item">
+        <div class="item__num">01</div>
+        <div class="item__body">
+          <p class="item__title">PE：美国的"集中抢人"在降温，名额往随时招的方向挪</p>
+          <p class="prose" style="margin:0">美国大型 PE 的 on-cycle<span class="gloss">（白话：各家基金在同一两周里集中面试投行一年级分析师，抢着发一两年后才入职的 offer）</span>去年在投行施压后暂停，这一届推迟到 2026 年 1 月才开；据公开报道，更多名额转向 off-cycle<span class="gloss">（白话：哪个团队缺人就什么时候招，没有统一时间）</span>。亚洲本来就以后一种为主。对你的含义：没有"错过窗口"这回事，要的是随时拿得出手的建模能力和一个讲得清楚的行业观点。</p>
+        </div>
+      </li>
+      <li class="item">
+        <div class="item__num">02</div>
+        <div class="item__body">
+          <p class="item__title">MBB 上海：这周没有查到公开的社招截止日</p>
+          <p class="prose" style="margin:0">三家中国区有工作经验者的招聘通常是滚动的，具体以各家官网的招聘页为准。校招批次的时间表对你不适用。能提前准备的只有一样：案例面试，和它背后"把一个率拆成几个原因"的习惯——今天的考点三就是这种拆法。</p>
+        </div>
+      </li>
+      <li class="item">
+        <div class="item__num">03</div>
+        <div class="item__body">
+          <p class="item__title">MAG7 FP&amp;A：JD 里最常见的一句话，今天练过了</p>
+          <p class="prose" style="margin:0">这类岗位的职位描述普遍会要求"解释实际数与预算、与去年的差异"，英文叫 variance analysis<span class="gloss">（白话：差异分析——数字和预期不一样，把差额拆成几个原因，每个原因各占多少）</span>，另外常见的是 SQL 和建模。把毛利率的变化拆成"组合"和"成本"两半，就是一道最基础的差异分析题。</p>
+        </div>
+      </li>
+      <li class="item">
+        <div class="item__num">04</div>
+        <div class="item__body">
+          <p class="item__title">审计跳槽：现在到年底是错峰期</p>
+          <p class="prose" style="margin:0">四大的人多数在年审旺季结束、奖金到手之后才动，所以每年春末夏初市场上的审计候选人最多。现在到 12 月投简历、约聊，竞争者少，但旺季一开始就很难请假面试。两三年的计划里，今年冬天适合做的是摸清岗位要求，不是出手。</p>
+        </div>
+      </li>
+    </ol>
+
+    <a class="btn" href="https://claude.ai/new?q=%E8%AF%B7%E7%BB%99%E6%88%91%E5%87%BA%E4%B8%80%E9%81%93%E4%B8%8A%E6%89%8B%E7%BB%83%E7%9A%84%E8%BF%9B%E9%98%B6%E9%A2%98%E3%80%82%E8%83%8C%E6%99%AF%EF%BC%9A%E6%88%91%E5%88%9A%E5%81%9A%E5%AE%8C%E4%B8%80%E9%81%93%E7%BB%83%E4%B9%A0%EF%BC%8C%E4%B8%80%E5%AE%B6%E8%99%9A%E6%9E%84%E7%9A%84%E7%BD%91%E7%BB%9C%E8%AE%BE%E5%A4%87%E5%85%AC%E5%8F%B8%EF%BC%8C%E6%94%B6%E5%85%A5%E4%BB%8E%2015%2C000%20%E6%B6%A8%E5%88%B0%2018%2C600%20%E7%99%BE%E4%B8%87%E7%BE%8E%E5%85%83%EF%BC%8C%E6%AF%9B%E5%88%A9%E7%8E%87%E4%BB%8E%2069.0%25%20%E6%8E%89%E5%88%B0%2065.0%25%EF%BC%8C%E8%90%A5%E4%B8%9A%E5%88%A9%E6%B6%A6%E7%8E%87%E5%8D%B4%E4%BB%8E%2028.7%25%20%E5%8D%87%E5%88%B0%2031.2%25%EF%BC%8C%E6%88%91%E7%AE%97%E5%87%BA%E4%BA%86%E5%A2%9E%E9%87%8F%E5%88%A9%E6%B6%A6%E7%8E%87%2041.7%25%EF%BC%8C%E5%B9%B6%E6%8A%8A%E6%AF%9B%E5%88%A9%E7%8E%87%E7%9A%84%E8%B7%8C%E5%B9%85%E6%8B%86%E6%88%90%E4%BA%86%E4%BA%A7%E5%93%81%E7%BB%84%E5%90%88%E5%92%8C%E6%88%90%E6%9C%AC%E4%B8%8A%E6%B6%A8%E4%B8%A4%E9%83%A8%E5%88%86%E3%80%82%E8%BF%99%E6%AC%A1%E8%AF%B7%E5%8A%A0%E4%B8%8A%E2%80%9C%E9%94%80%E9%87%8F%E2%80%9D%E5%92%8C%E2%80%9C%E5%8D%95%E4%BB%B7%E2%80%9D%E4%B8%A4%E4%B8%AA%E5%8F%98%E5%8C%96%EF%BC%8C%E8%AE%A9%E6%88%91%E6%8A%8A%E6%94%B6%E5%85%A5%E7%9A%84%E5%8F%98%E5%8C%96%E6%8B%86%E6%88%90%E9%87%8F%E3%80%81%E4%BB%B7%E3%80%81%E7%BB%84%E5%90%88%E4%B8%89%E5%9D%97%EF%BC%8C%E6%95%B0%E6%8D%AE%E9%9B%86%E6%8E%A7%E5%88%B6%E5%9C%A8%2010%20%E8%A1%8C%E4%BB%A5%E5%86%85%E3%80%82%E6%88%91%E4%B8%8D%E4%BC%9A%20Excel%EF%BC%8C%E6%AF%8F%E4%B8%80%E6%AD%A5%E9%83%BD%E8%A6%81%E5%86%99%E6%B8%85%E6%A5%9A%E7%82%B9%E5%93%AA%E4%B8%AA%E5%8D%95%E5%85%83%E6%A0%BC%E3%80%81%E8%BE%93%E5%85%A5%E4%BB%80%E4%B9%88%E5%85%AC%E5%BC%8F%E3%80%81%E7%84%B6%E5%90%8E%E5%81%9A%E4%BB%80%E4%B9%88%E5%8A%A8%E4%BD%9C%EF%BC%8C%E7%94%A8%E5%88%B0%E7%9A%84%E5%87%BD%E6%95%B0%E5%90%84%E7%94%A8%E4%B8%80%E5%8F%A5%E8%AF%9D%E8%A7%A3%E9%87%8A%E3%80%82%E6%9C%80%E5%90%8E%E7%BB%99%E6%88%91%E4%B8%80%E4%BB%BD%E5%B8%A6%E7%AD%94%E6%A1%88%E7%9A%84%E5%AE%8C%E6%95%B4%E7%BB%83%E4%B9%A0%E3%80%82&amp;surface=cowork&amp;composer=mini">再出一道进阶题</a>
+    <a class="btn" href="https://claude.ai/new?q=%E6%88%91%E6%98%AF%E8%B4%A2%E5%8A%A1%E5%B0%8F%E7%99%BD%E3%80%82%E8%AF%B7%E7%94%A8%E7%94%9F%E6%B4%BB%E9%87%8C%E7%9A%84%E4%BE%8B%E5%AD%90%E7%BB%99%E6%88%91%E8%AE%B2%E6%B8%85%E6%A5%9A%E8%BF%99%E5%87%A0%E4%B8%AA%E8%AF%8D%E7%9A%84%E5%8C%BA%E5%88%AB%EF%BC%9A%E6%AF%9B%E5%88%A9%E7%8E%87%E3%80%81%E8%90%A5%E4%B8%9A%E5%88%A9%E6%B6%A6%E7%8E%87%E3%80%81%E5%A2%9E%E9%87%8F%E5%88%A9%E6%B6%A6%E7%8E%87%E3%80%81%E7%BB%8F%E8%90%A5%E6%9D%A0%E6%9D%86%E3%80%81%E4%BA%A7%E5%93%81%E7%BB%84%E5%90%88%EF%BC%88mix%EF%BC%89%E3%80%81%E8%90%A5%E4%B8%9A%E6%88%90%E6%9C%AC%E5%92%8C%E6%9C%9F%E9%97%B4%E8%B4%B9%E7%94%A8%E3%80%82%E4%B8%8D%E8%A6%81%E7%94%A8%E5%8F%A6%E4%B8%80%E4%B8%AA%E6%9C%AF%E8%AF%AD%E5%8E%BB%E8%A7%A3%E9%87%8A%E6%9C%AF%E8%AF%AD%EF%BC%8C%E6%AF%8F%E4%B8%AA%E8%AF%8D%E9%85%8D%E4%B8%80%E4%B8%AA%E6%88%91%E8%83%BD%E5%A4%8D%E8%BF%B0%E7%BB%99%E5%88%AB%E4%BA%BA%E5%90%AC%E7%9A%84%E4%BE%8B%E5%AD%90%E3%80%82%E6%9C%80%E5%90%8E%E7%BB%99%E6%88%91%E4%B8%80%E9%A1%B5%E5%8F%AF%E4%BB%A5%E5%AD%98%E4%B8%8B%E6%9D%A5%E7%9A%84%E7%99%BD%E8%AF%9D%E5%AF%B9%E7%85%A7%E8%A1%A8%E3%80%82&amp;surface=cowork&amp;composer=mini">把这几个词讲透</a>
+    <a class="btn" href="https://claude.ai/new?q=%E8%AF%B7%E4%BD%A0%E6%89%AE%E6%BC%94%E4%B9%B0%E6%96%B9%E9%9D%A2%E8%AF%95%E5%AE%98%EF%BC%8C%E5%92%8C%E6%88%91%E5%81%9A%E4%B8%80%E5%9C%BA%E6%A8%A1%E6%8B%9F%E9%9D%A2%E8%AF%95%E3%80%82%E9%A2%98%E7%9B%AE%E5%9B%B4%E7%BB%95%E6%80%9D%E7%A7%91%202027%20%E8%B4%A2%E5%B9%B4%E7%AC%AC%E4%B8%80%E5%AD%A3%E5%BA%A6%E8%B4%A2%E6%8A%A5%EF%BC%9A%E6%94%B6%E5%85%A5%E7%BA%A6%20185%20%E4%BA%BF%E7%BE%8E%E5%85%83%E3%80%81%E5%90%8C%E6%AF%94%E5%A2%9E%E9%95%BF%2024%25%EF%BC%8C%E8%B0%83%E6%95%B4%E5%90%8E%E6%AF%9B%E5%88%A9%E7%8E%87%E4%BB%8E%2068.1%25%20%E9%99%8D%E5%88%B0%2065.6%25%EF%BC%8C%E8%B0%83%E6%95%B4%E5%90%8E%E8%90%A5%E4%B8%9A%E5%88%A9%E6%B6%A6%E7%8E%87%E5%8D%87%E5%88%B0%2037.8%25%EF%BC%8C%E5%85%AC%E5%8F%B8%E9%A2%84%E8%AE%A1%E5%85%A8%E5%B9%B4%E6%9D%A5%E8%87%AA%E8%B6%85%E5%A4%A7%E5%9E%8B%E4%BA%91%E5%8E%82%E5%95%86%E7%9A%84%20AI%20%E5%9F%BA%E7%A1%80%E8%AE%BE%E6%96%BD%E6%94%B6%E5%85%A5%E7%BA%A6%2090%20%E4%BA%BF%E7%BE%8E%E5%85%83%E3%80%82%E4%BD%A0%E5%8F%AF%E4%BB%A5%E4%B8%8A%E7%BD%91%E6%A0%B8%E5%AF%B9%E8%BF%99%E4%BA%9B%E5%85%AC%E5%BC%80%E6%95%B0%E5%AD%97%E3%80%82%E8%AF%B7%E5%B0%B1%E2%80%9C%E6%AF%9B%E5%88%A9%E7%8E%87%E4%B8%BA%E4%BB%80%E4%B9%88%E8%B7%8C%E2%80%9D%E2%80%9C%E5%88%A9%E6%B6%A6%E7%8E%87%E4%B8%BA%E4%BB%80%E4%B9%88%E8%BF%98%E8%83%BD%E6%B6%A8%E2%80%9D%E2%80%9C%E6%94%B6%E5%85%A5%E5%A2%9E%E9%80%9F%E6%94%BE%E6%85%A2%E6%97%B6%E4%BC%9A%E6%80%8E%E6%A0%B7%E2%80%9D%E8%BF%9E%E7%BB%AD%E8%BF%BD%E9%97%AE%E6%88%91%EF%BC%8C%E6%AF%8F%E6%AC%A1%E5%8F%AA%E9%97%AE%E4%B8%80%E4%B8%AA%E9%97%AE%E9%A2%98%EF%BC%8C%E7%AD%89%E6%88%91%E7%AD%94%E5%AE%8C%E5%86%8D%E8%BF%BD%E9%97%AE%E3%80%82%E7%BB%93%E6%9D%9F%E5%90%8E%E7%BB%99%E6%88%91%E4%B8%80%E4%BB%BD%E4%B9%A6%E9%9D%A2%E7%82%B9%E8%AF%84%EF%BC%9A%E5%93%AA%E9%87%8C%E7%AD%94%E5%BE%97%E5%A5%BD%E3%80%81%E5%93%AA%E9%87%8C%E9%9C%B2%E6%80%AF%E3%80%81%E6%A0%87%E5%87%86%E7%AD%94%E6%B3%95%E6%98%AF%E4%BB%80%E4%B9%88%E3%80%82&amp;surface=cowork&amp;composer=mini">拿这份财报练面试</a>
+
   </div>
-</section>
+</div>
+
 </body>
 </html>
