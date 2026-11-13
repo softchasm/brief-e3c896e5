@@ -108,6 +108,10 @@
     .item,.act,.drawing,.tablewrap,.step,h2,h3{break-inside:avoid;page-break-inside:avoid}
     h2,h3{break-after:avoid;page-break-after:avoid}
     .btn{display:none}
+    .item{display:block}
+    .item__num{float:left;width:34px}
+    .item__body{margin-left:34px}
+    ol:first-of-type > .item:first-child{break-inside:auto;page-break-inside:auto}
   }
 </style>
 <script src="live.js?v=3" defer></script>
@@ -121,20 +125,19 @@
     <h1>Carl，今天只讲一件事：电费和选票，正在变成财报上的数字。</h1>
 
     <svg class="drawing" viewBox="0 0 840 180" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-      <path d="M 0,56 C 24,50 42,47 60,47 C 110,47 150,86 190,112
-               C 215,128 232,133 250,133 C 300,133 370,124 420,120
-               C 480,115 545,103 600,93 C 655,83 730,79 790,77
-               C 812,76 828,75 840,74"
+      <path d="M 0,54 C 20,53 40,53 60,53 C 125,53 185,137 250,137
+               C 310,137 360,131 420,131 C 480,131 540,87.5 600,87.5
+               C 665,87.5 725,87.5 790,87.5 L 840,87.5"
             fill="none" stroke="#2E2C27" stroke-width="1.6" stroke-linecap="round"/>
-      <circle cx="60"  cy="47"  r="6"  fill="#B4B3A8"/>
-      <circle cx="250" cy="133" r="12" fill="#2E2C27"/>
-      <circle cx="420" cy="120" r="7"  fill="#2E2C27"/>
-      <circle cx="600" cy="93"  r="9"  fill="#2E2C27"/>
-      <circle cx="790" cy="77"  r="7.5" fill="none" stroke="#C6613F" stroke-width="1.8"/>
-      <text x="60"  y="166" text-anchor="middle" font-family="-apple-system,sans-serif" font-size="11" fill="#B4B3A8">11/4 选举前</text>
-      <text x="250" y="166" text-anchor="middle" font-family="-apple-system,sans-serif" font-size="11" fill="#B4B3A8">11/5 暴跌</text>
-      <text x="420" y="166" text-anchor="middle" font-family="-apple-system,sans-serif" font-size="11" fill="#B4B3A8">11/6</text>
-      <text x="600" y="166" text-anchor="middle" font-family="-apple-system,sans-serif" font-size="11" fill="#B4B3A8">11/9 反弹</text>
+      <circle cx="60"  cy="53"   r="6"  fill="#B4B3A8"/>
+      <circle cx="250" cy="137"  r="12" fill="#2E2C27"/>
+      <circle cx="420" cy="131"  r="7"  fill="#2E2C27"/>
+      <circle cx="600" cy="87.5" r="9"  fill="#2E2C27"/>
+      <circle cx="790" cy="87.5" r="7.5" fill="#F9F9F7" stroke="#C6613F" stroke-width="1.8"/>
+      <text x="60"  y="166" text-anchor="middle" font-family="-apple-system,sans-serif" font-size="11" fill="#B4B3A8">11/4 周三 大选后上涨</text>
+      <text x="250" y="166" text-anchor="middle" font-family="-apple-system,sans-serif" font-size="11" fill="#B4B3A8">11/5 周四 −4.4%</text>
+      <text x="420" y="166" text-anchor="middle" font-family="-apple-system,sans-serif" font-size="11" fill="#B4B3A8">11/6 周五 +0.3%</text>
+      <text x="600" y="166" text-anchor="middle" font-family="-apple-system,sans-serif" font-size="11" fill="#B4B3A8">11/9 周一 +2.3%</text>
       <text x="790" y="166" text-anchor="middle" font-family="-apple-system,sans-serif" font-size="11" fill="#C6613F">今晚 CPI</text>
     </svg>
 
@@ -164,8 +167,8 @@
         <div class="item__num">01</div>
         <div class="item__body">
           <p class="item__title">这是今天的主线</p>
-          <p class="en">What knocked down the AI trade last week wasn't earnings — it was a zoning board. Michigan's governor blocked an 1,800-acre data center, and the market suddenly repriced a risk it had been ignoring: <b>compute is not just a chip problem, it is a land-and-power problem</b>, and land and power are decided by voters. The Nasdaq fell <b>5.5%</b>, its worst week since April 2025; the S&amp;P 500 lost <b>4.4%</b>.</p>
-          <p class="zh">上周打下 AI 板块的不是财报，是一个地方规划委员会。密歇根州州长否决了一个 1,800 英亩的数据中心项目，市场突然意识到一件之前没定价的事：<b>算力不只是买不买得到芯片，还是有没有地、有没有电</b>——而地和电是选民说了算的。纳斯达克跌 5.5%，2025 年 4 月以来最差的一周；标普 500 跌 4.4%。</p>
+          <p class="en">What knocked down the AI trade last week wasn't earnings — it was an election. After Democrats' sweeping wins in Congress and key governorships, the market suddenly repriced a risk it had been ignoring: <b>compute is not just a chip problem, it is a land-and-power problem</b>, and land and power are decided by voters. On Thursday the Nasdaq fell <b>5.5%</b> and the S&amp;P 500 <b>4.4%</b>, their worst day since April 2025; for the week they ended down 3.4% and 2.7%.</p>
+          <p class="zh">上周打下 AI 板块的不是财报，是一场选举。民主党在国会和几个关键州的州长选举中大胜，市场突然意识到一件之前没定价的事：<b>算力不只是买不买得到芯片，还是有没有地、有没有电</b>——而地和电是选民说了算的。上周四纳斯达克一天跌 5.5%、标普 500 跌 4.4%，是 2025 年 4 月以来最差的一天；全周分别收跌 3.4% 和 2.7%。</p>
         </div>
       </li>
       <li class="item">
@@ -181,8 +184,8 @@
         <div class="item__num">03</div>
         <div class="item__body">
           <p class="item__title">今晚 21:30，今天唯一的硬数据</p>
-          <p class="en">October CPI <span class="gloss">（白话：居民消费价格指数，衡量老百姓买同一篮子东西，今年比去年贵了多少）</span> lands tonight at 21:30 Beijing time. Consensus is <b>3.9%</b> year-over-year, up from <b>3.7%</b>. A hotter print pushes rate-cut expectations further out, which hits long-duration growth names hardest — and nothing is longer-duration than a data center that starts earning in 2029.</p>
-          <p class="zh">10 月 CPI 北京时间今晚 21:30 公布，市场预期同比 <b>3.9%</b>，高于前值 3.7%。数字如果更高，降息预期就往后推；<b>降息推后，对"要等很多年才赚钱"的公司伤害最大</b>——而没有什么比一个 2029 年才开始产生收入的数据中心更"要等很多年"。这就是今晚的数字和第 01 条的连接点。</p>
+          <p class="en">October CPI <span class="gloss">（白话：居民消费价格指数，衡量老百姓买同一篮子东西，今年比去年贵了多少）</span> lands tonight at 21:30 Beijing time. Economists expect a <b>0.3%</b> monthly rise after September's 0.6%. A hotter print would raise the odds of a Fed rate hike in December — futures already put them at roughly 70% to 80% — and higher rates hit long-duration growth names hardest — and nothing is longer-duration than a data center that starts earning in 2029.</p>
+          <p class="zh">10 月 CPI 北京时间今晚 21:30 公布，经济学家预期环比（和上一个月比）上涨 <b>0.3%</b>，9 月是 0.6%。数字如果更高，12 月加息的可能性就更大——期货市场已经押到七八成；<b>利率越高，对"要等很多年才赚钱"的公司伤害越大</b>——而没有什么比一个 2029 年才开始产生收入的数据中心更"要等很多年"。这就是今晚的数字和第 01 条的连接点。</p>
         </div>
       </li>
       <li class="item">
