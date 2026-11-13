@@ -4,8 +4,11 @@
  * 一、这一页本身改了：页面开着的时候，每 30 秒（以及切回这个标签页、点回这个窗口时）
  *     向服务器要一份这一页的最新版本，和正在显示的版本比较；内容变了，就自动换成新版，
  *     并回到原来读到的位置。
- * 二、出了新的一期：如果打开时这一页就是最新一期，之后 latest.json 指向了别的一期，
- *     这一页会自动切过去。专门回去看旧刊时不打扰。
+ * 二、出了新的一期：
+ *     · 网站首页（固定网址）本身就是最新一期的那张页面。新的一期发布后首页内容整个换掉，
+ *       按第一条自动换成新版；因为是另一期了，从头显示，不回到旧一期读到的位置。
+ *     · 单独打开某一天的页面：如果打开时它就是最新一期，之后 latest.json 指向了别的一期，
+ *       会自动切过去。专门回去看旧刊时不打扰。
  *
  * 为什么要自己比：网站让浏览器把页面缓存 10 分钟，服务器每次部署又会改掉所有文件的
  * 修改时间，所以既不能指望普通刷新，也不能看修改时间，只能比内容本身。
@@ -56,8 +59,15 @@
     }
   }
 
+  // 这一页显示的是哪一期：发布时写进 <head> 的 brief-edition；没有就拿标题顶替
+  function edition() {
+    var m = document.querySelector('meta[name="brief-edition"]');
+    return (m && m.getAttribute('content')) || document.title || '';
+  }
+
   function goFresh() {
     sSet(key + ':y', String(window.pageYOffset || 0));
+    sSet(key + ':ed', edition());
     location.replace(path + '?v=' + Date.now() + location.hash);
   }
 
@@ -69,12 +79,18 @@
     try { history.replaceState(history.state, '', path + location.hash); } catch (e) {}
   }
   var savedY = sGet(key + ':y');
+  var savedEd = sGet(key + ':ed');
+  // 同一个地址上换成了另一期（首页就是这样）：从头看起，不回到旧一期读到的位置
+  var newIssue = savedEd !== null && savedEd !== edition();
+  if (savedEd !== null) { sDel(key + ':ed'); }
   if (savedY !== null) {
     sDel(key + ':y');
-    var restore = function () { window.scrollTo(0, parseInt(savedY, 10) || 0); };
-    if (document.readyState === 'complete') { restore(); } else { window.addEventListener('load', restore); }
+    if (!newIssue) {
+      var restore = function () { window.scrollTo(0, parseInt(savedY, 10) || 0); };
+      if (document.readyState === 'complete') { restore(); } else { window.addEventListener('load', restore); }
+    }
   }
-  if (cameFromLatest) { notice('已切换到最新一期'); }
+  if (cameFromLatest || (cameFromUpdate && newIssue)) { notice('已切换到最新一期'); }
   else if (cameFromUpdate) { notice('已自动更新到最新版本'); }
 
   function fingerprint(text) {

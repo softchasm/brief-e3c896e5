@@ -4,6 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex,nofollow,noarchive">
+<meta http-equiv="refresh" content="0; url=./">
 <title>晨间简报 · 最新一期</title>
 <style>
   body{margin:0;padding:64px 20px;background:#FCFCFB;color:#6B6A63;text-align:center;
@@ -13,18 +14,8 @@
 </style>
 </head>
 <body>
-<p>正在打开最新一期……</p>
-<p><a href="./">打不开的话，点这里看全部日报</a></p>
-<script>
-(function () {
-  fetch('latest.json', { cache: 'no-store' })
-    .then(function (r) { return r.json(); })
-    .then(function (j) {
-      var d = j && j.date;
-      location.replace(/^\d{4}-\d{2}-\d{2}$/.test(d || '') ? d + '.html?follow=' + Date.now() : './');
-    })
-    .catch(function () { location.replace('./'); });
-})();
-</script>
+<p>最新一期就在网站首页，正在过去……</p>
+<p><a href="./">没有自动跳转的话，点这里</a></p>
+<script>location.replace('./');</script>
 </body>
 </html>
